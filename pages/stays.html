@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Stays - ORA Classy Interior Designer</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       Stays Page — Premium Booking Hero
+       ======================================== */
+    .stays-page {
+      background: #F8F7F4;
+      min-height: 100vh;
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
+
+    /* --- Override ORA header for this page --- */
+    .stays-page .site-header {
+      background: rgba(248, 247, 244, 0.95);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .stays-page .logo { color: #111111; }
+    .stays-page .logo:hover { color: #B8955D; }
+    .stays-page .main-nav a { color: #7A7A7A; }
+    .stays-page .main-nav a:hover,
+    .stays-page .main-nav a.active { color: #111111; }
+    .stays-page .main-nav a::after { background: #111111; }
+    .stays-page .menu-toggle span { background: #111111; }
+    .stays-page .btn-primary {
+      background: #111111;
+      color: #FFFFFF;
+      border-radius: 100px;
+      padding: 14px 36px;
+    }
+    .stays-page .btn-primary:hover {
+      background: #2a2a2a;
+      transform: translateY(-2px);
+    }
+    .stays-page .btn-outline {
+      color: #111111;
+      border-color: #D4D4D4;
+      border-radius: 100px;
+      padding: 14px 36px;
+    }
+    .stays-page .btn-outline:hover {
+      border-color: #111111;
+      color: #111111;
+    }
+    .stays-page .header-actions .btn { padding: 10px 28px; }
+
+    /* --- Hero Section --- */
+    .booking-hero {
+      padding: 120px 0 80px;
+      background: #F8F7F4;
+    }
+    .booking-hero .hero-inner {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 60px;
+      align-items: center;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* Left Content */
+    .hero-content-left {
+      padding-right: 20px;
+    }
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #EEEDEA;
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #7A7A7A;
+      margin-bottom: 32px;
+    }
+    .rating-badge .star {
+      color: #E8A83E;
+      font-size: 15px;
+    }
+    .rating-badge .rating-num {
+      color: #111111;
+      font-weight: 600;
+    }
+    .hero-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 72px;
+      font-weight: 700;
+      color: #111111;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+    }
+    .hero-heading .line-break {
+      display: block;
+    }
+    .hero-desc-text {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #7A7A7A;
+      max-width: 400px;
+      margin-bottom: 40px;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 56px;
+    }
+    .hero-cta .btn {
+      border-radius: 100px;
+      padding: 16px 40px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    /* Trusted By */
+    .trusted-section {}
+    .trusted-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #7A7A7A;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .trusted-logos {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .trusted-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #BBBBBB;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+    .trusted-logo:hover { color: #111111; }
+
+    /* Right Image */
+    .hero-image-wrap {
+      position: relative;
+    }
+    .hero-image-main {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      position: relative;
+    }
+    .hero-image-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .hero-image-main:hover img {
+      transform: scale(1.04);
+    }
+
+    /* Floating Icons */
+    .float-icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      animation: float 3s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .float-icon-fav {
+      top: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: 20px;
+      color: #E85D5D;
+      animation-delay: 0s;
+    }
+    .float-icon-booking {
+      bottom: 32px;
+      left: -24px;
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.3);
+      gap: 12px;
+      animation-delay: 1s;
+    }
+    .float-icon-booking .booking-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .float-icon-booking .booking-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .float-icon-booking .booking-text {}
+    .float-icon-booking .booking-text strong {
+      display: block;
+      font-size: 13px;
+      color: #111111;
+      font-weight: 600;
+    }
+    .float-icon-booking .booking-text span {
+      font-size: 11px;
+      color: #7A7A7A;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* ========================================
+       Property Cards Section
+       ======================================== */
+    .property-section {
+      padding: 0 0 100px;
+      background: #F8F7F4;
+    }
+    .property-section .property-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .property-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    /* Property Card */
+    .prop-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: pointer;
+      position: relative;
+    }
+    .prop-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    }
+    .prop-card-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .prop-card-image img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: block;
+    }
+    .prop-card:hover .prop-card-image img {
+      transform: scale(1.06);
+    }
+    .prop-fav {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      cursor: pointer;
+      color: #CCCCCC;
+      transition: all 0.3s ease;
+      z-index: 2;
+    }
+    .prop-fav:hover {
+      color: #E85D5D;
+      background: #FFFFFF;
+      transform: scale(1.1);
+    }
+    .prop-card-body {
+      padding: 20px 24px 24px;
+    }
+    .prop-card-body h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #111111;
+      margin-bottom: 4px;
+    }
+    .prop-location {
+      font-size: 14px;
+      color: #7A7A7A;
+      margin-bottom: 16px;
+    }
+    .prop-price {
+      font-size: 18px;
+      font-weight: 600;
+      color: #111111;
+    }
+    .prop-price span {
+      font-size: 14px;
+      font-weight: 400;
+      color: #7A7A7A;
+    }
+
+    /* Center Info Card */
+    .prop-info-card {
+      background: #E8E3DA;
+      border-radius: 24px;
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .prop-info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+    }
+    .prop-info-card .info-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.5);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #7A7A7A;
+      align-self: flex-start;
+      margin-bottom: 16px;
+    }
+    .prop-info-card h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: #111111;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .prop-info-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #7A7A7A;
+      margin-bottom: 24px;
+    }
+    .prop-info-card .info-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #111111;
+      text-decoration: none;
+      transition: gap 0.3s ease;
+    }
+    .prop-info-card .info-link:hover {
+      gap: 14px;
+    }
+
+    /* ========================================
+       Footer Overrides
+       ======================================== */
+    .stays-page .site-footer {
+      background: #111111;
+      border-top: none;
+    }
+    .stays-page .site-footer .footer-logo,
+    .stays-page .site-footer h4 { color: #FFFFFF; }
+    .stays-page .site-footer p,
+    .stays-page .site-footer a { color: #999999; }
+    .stays-page .site-footer a:hover { color: #FFFFFF; }
+
+    /* ========================================
+       Responsive
+       ======================================== */
+    @media (max-width: 1100px) {
+      .booking-hero .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .hero-content-left { padding-right: 0; }
+      .hero-desc-text { max-width: 100%; }
+      .hero-image-main { aspect-ratio: 16/10; }
+      .float-icon-booking { left: 16px; }
+      .property-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .prop-info-card { order: -1; }
+    }
+
+    @media (max-width: 768px) {
+      .booking-hero { padding: 100px 0 40px; }
+      .booking-hero .hero-inner,
+      .property-section .property-inner { padding: 0 20px; }
+      .hero-heading { font-size: 44px; }
+      .hero-desc-text { font-size: 16px; }
+      .hero-cta { flex-direction: column; }
+      .hero-cta .btn { width: 100%; text-align: center; }
+      .trusted-logos { gap: 20px; }
+      .trusted-logo { font-size: 15px; }
+      .float-icon-booking { display: none; }
+      .property-grid { grid-template-columns: 1fr; }
+      .prop-card-image img { height: 200px; }
+      .prop-info-card { padding: 28px 24px; }
+      .prop-info-card h2 { font-size: 22px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-heading { font-size: 34px; }
+      .hero-image-main { border-radius: 20px; }
+      .prop-card { border-radius: 16px; }
+      .prop-info-card { border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-wrapper stays-page">
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">ORA</a>
+        <nav class="main-nav" id="mainNav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="stays.html" class="active">Stays</a></li>
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Booking Hero -->
+    <section class="booking-hero">
+      <div class="hero-inner">
+        <!-- Left -->
+        <div class="hero-content-left">
+          <div class="rating-badge">
+            <span class="star">&#9733;</span>
+            <span class="rating-num">4.9</span>
+            <span>Rating</span>
+          </div>
+
+          <h1 class="hero-heading">
+            Find out the<br>
+            <span class="line-break">Best stay.</span>
+          </h1>
+
+          <p class="hero-desc-text">
+            Discover amazing stays and luxury accommodations carefully selected for comfort and unforgettable experiences.
+          </p>
+
+          <div class="hero-cta">
+            <a href="contact.html" class="btn btn-primary">Get Started</a>
+            <a href="../index.html" class="btn btn-outline">Log In</a>
+          </div>
+
+          <div class="trusted-section">
+            <p class="trusted-label">Trusted by</p>
+            <div class="trusted-logos">
+              <span class="trusted-logo">Airbnb</span>
+              <span class="trusted-logo">Emirates</span>
+              <span class="trusted-logo">United Travel</span>
+              <span class="trusted-logo">Marriott</span>
+              <span class="trusted-logo">Accor</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="hero-image-wrap">
+          <div class="hero-image-main">
+            <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=900" alt="Luxury living room with wooden textures and natural light" loading="lazy">
+            <div class="float-icon float-icon-fav">&#9825;</div>
+            <div class="float-icon float-icon-booking">
+              <div class="booking-avatar">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=100" alt="Interior preview">
+              </div>
+              <div class="booking-text">
+                <strong>Book Now</strong>
+                <span>Best rates guaranteed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Cards -->
+    <section class="property-section">
+      <div class="property-inner">
+        <div class="property-grid">
+          <!-- Card 1 -->
+          <div class="prop-card">
+            <div class="prop-card-image">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500" alt="Scandinavian living room with wooden floors" loading="lazy">
+              <button class="prop-fav" aria-label="Favorite">&#9825;</button>
+            </div>
+            <div class="prop-card-body">
+              <h3>Scandinavian Loft</h3>
+              <p class="prop-location">Stockholm, Sweden</p>
+              <p class="prop-price">$320 <span>/ night</span></p>
+            </div>
+          </div>
+
+          <!-- Center Info Card -->
+          <div class="prop-info-card">
+            <span class="info-badge">&#9733; Editor's Pick</span>
+            <h2>Best option to stay for<br>your summer vacations</h2>
+            <p>Curated luxury interiors designed for relaxation, comfort, and timeless elegance.</p>
+            <a href="projects.html" class="info-link">Explore More &rarr;</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="prop-card">
+            <div class="prop-card-image">
+              <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=500" alt="Luxury bedroom with warm lighting" loading="lazy">
+              <button class="prop-fav" aria-label="Favorite">&#9825;</button>
+            </div>
+            <div class="prop-card-body">
+              <h3>Modern Suite</h3>
+              <p class="prop-location">Copenhagen, Denmark</p>
+              <p class="prop-price">$450 <span>/ night</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="../index.html" class="footer-logo">ORA</a>
+            <p>Classy interior design that transforms spaces into works of art.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+              <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+              <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12c0 5.1 3.1 9.4 7.6 11.2-.1-.9-.2-2.4 0-3.4.2-.9 1.4-6 1.4-6s-.4-.8-.4-1.9c0-1.8 1-3.2 2.4-3.2 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.8-1.1 4.3-.3 1.3.6 2.3 1.9 2.3 2.3 0 4.1-2.4 4.1-6 0-3.1-2.2-5.3-5.4-5.3-3.7 0-5.8 2.8-5.8 5.6 0 1.1.4 2.3.9 3 .1.1.1.2.1.4-.1.4-.3 1.3-.4 1.5-.1.2-.2.3-.4.2-1.6-.8-2.6-3.1-2.6-5 0-4.1 3-7.9 8.6-7.9 4.5 0 8 3.2 8 7.6 0 4.5-2.8 8.1-6.7 8.1-1.3 0-2.5-.7-2.9-1.5l-.8 3c-.3 1.1-1.1 2.5-1.6 3.4C7.9 23.1 9.9 24 12 24c6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg></a>
+              <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="stays.html">Stays</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Residential Design</a></li>
+              <li><a href="services.html">Commercial Design</a></li>
+              <li><a href="services.html">Renovation</a></li>
+              <li><a href="services.html">Consulting</a></li>
+              <li><a href="services.html">3D Layouts</a></li>
+              <li><a href="services.html">Furniture Styling</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Stays</h4>
+            <ul>
+              <li><a href="stays.html">Luxury Stays</a></li>
+              <li><a href="stays.html">Book Now</a></li>
+              <li><a href="projects.html">Our Portfolio</a></li>
+              <li><a href="contact.html">Get in Touch</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 ORA - Classy Interior Designer. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var favBtns = document.querySelectorAll('.prop-fav');
+      favBtns.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          this.classList.toggle('liked');
+          if (this.classList.contains('liked')) {
+            this.innerHTML = '&#9829;';
+            this.style.color = '#E85D5D';
+          } else {
+            this.innerHTML = '&#9825;';
+            this.style.color = '#CCCCCC';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

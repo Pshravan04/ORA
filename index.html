@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORA Spaces – Inspired by You, Built by Us.</title>
+    <meta name="description" content="ORA Spaces converts digital inspiration into physical reality — handling every detail from design coordination to final handover.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP & ThreeJS via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header floating-pill">
+        <div class="header-inner">
+            <a href="index.html" class="logo">ORA.</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/services.html">Services</a></li>
+                    <li><a href="pages/projects.html">Projects</a></li>
+                    <li><a href="pages/gallery.html">Gallery</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="pages/contact.html" class="btn btn-outline" style="border-radius: 50px;">Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Immersive Hero -->
+        <section class="hero-bento" id="home">
+            <div class="hero-bento-inner">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=2000" class="hero-bg-img" alt="ORA Interior Design">
+                <div class="hero-overlay"></div>
+                <div class="hero-content-bottom">
+                    <div class="hero-left">
+                        <span class="subtitle" style="color: rgba(255,255,255,0.7);" data-animate="fade-up">YOUR INSPIRATION</span>
+                        <h1 class="heading-lg" style="color: #fff; margin-bottom: 0;" data-animate="fade-up">
+                            You've been saving <br>
+                            ideas <span class="text-accent">for years.</span>
+                        </h1>
+                    </div>
+                    <div class="hero-right" data-animate="fade-up">
+                        <p style="color: #fff; font-size: 1.125rem; max-width: 400px;">The Pinterest board. The Instagram saves. The YouTube rabbit holes at midnight. You know exactly what you want your space to feel like.</p>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="pages/contact.html" class="btn" style="background-color: var(--color-off-white); color: var(--color-dark-brown); border-radius: 50px;">Start Your Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Execution (Brand Story) -->
+        <section class="section-padding" style="position: relative; background-image: linear-gradient(rgba(183, 168, 154, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(183, 168, 154, 0.15) 1px, transparent 1px); background-size: 40px 40px;">
+            <div class="container split-editorial">
+                <!-- Left: Text Content -->
+                <div class="editorial-content" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-right: 4rem; position: relative; height: 100%;">
+                    
+                    <!-- Decorative Watermark -->
+                    <div style="position: absolute; top: -2rem; left: -2rem; font-size: 15rem; font-family: var(--font-heading); color: var(--color-warm-beige); opacity: 0.1; z-index: 0; line-height: 1; pointer-events: none;" data-parallax="true">01</div>
+                    
+                    <div style="position: relative; z-index: 1;">
+                        <span class="subtitle" style="font-weight: 600; font-size: 0.75rem; letter-spacing: 0.15em;" data-animate="fade-up">OUR EXECUTION</span>
+                        <h2 class="heading-lg" data-animate="fade-up" style="margin: 1.5rem 0; line-height: 1.1; font-size: clamp(3rem, 5vw, 4.5rem);">Now it's time <br>to live it.</h2>
+                        <p style="margin: 1.5rem 0 3rem 0; color: #555; font-size: 1.125rem; max-width: 450px; line-height: 1.8;" data-animate="fade-up">ORA Spaces converts digital inspiration into physical reality — handling every detail from design coordination to final handover.</p>
+                        <a href="pages/services.html" class="btn btn-primary" data-animate="fade-up" style="border-radius: 50px; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; padding: 1rem 2rem; display: inline-flex; align-items: center; gap: 0.5rem;">View Our Scope <span>&rarr;</span></a>
+                    </div>
+
+                    <!-- Decorative Detail Element -->
+                    <div style="margin-top: auto; padding-top: 4rem; display: flex; align-items: center; gap: 2rem; width: 100%; position: relative; z-index: 1;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&q=80&w=400" alt="Detail" style="width: 220px; height: 160px; object-fit: cover; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-warm-beige); max-width: 140px; line-height: 1.6; border-left: 1px solid var(--color-warm-beige); padding-left: 1rem;">
+                            Attention to every minimal detail.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Large Rounded Image -->
+                <div class="editorial-img-wrap" data-parallax="true" style="border-radius: 1.5rem; overflow: hidden; position: relative; height: 80vh; width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200" alt="Execution" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 3rem; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%); color: #fff;">
+                        <span class="subtitle" style="color: rgba(255,255,255,0.7); letter-spacing: 0.15em; font-size: 0.75rem; margin-bottom: 0.5rem; display: block;">FEATURED PROJECT</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 2.5rem; color: #fff; margin: 0 0 1rem 0; font-weight: 400;">Modern Harmony</h3>
+                        <a href="pages/projects.html" style="color: #fff; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-body); font-weight: 600;">View Project &nbsp;&rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Statistics (Bento Grid) -->
+        <section class="section-padding" style="background-color: #EBE6DF;">
+            <div class="container">
+                <div class="stats-bento-grid">
+                    <!-- Column 1: Image -> Stat -->
+                    <div class="bento-col" data-animate="fade-up">
+                        <div class="bento-item bento-img">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="ORA Interior Details">
+                        </div>
+                        <div class="bento-item bento-stat">
+                            <div class="stat-number" data-target="500" data-suffix="+">0+</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2: Stat -> Image -->
+                    <div class="bento-col" data-animate="fade-up">
+                        <div class="bento-item bento-stat">
+                            <div class="stat-number" data-target="15" data-suffix="+">0+</div>
+                            <div class="stat-label">Scope Services</div>
+                        </div>
+                        <div class="bento-item bento-img">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" alt="ORA Workspace">
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Image -> Stat -->
+                    <div class="bento-col" data-animate="fade-up">
+                        <div class="bento-item bento-img">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800" alt="ORA Residential Design">
+                        </div>
+                        <div class="bento-item bento-stat">
+                            <div class="stat-number" data-target="3" data-suffix="">0</div>
+                            <div class="stat-label">Segments Served</div>
+                        </div>
+                    </div>
+
+                    <!-- Column 4: Stat -> Image -->
+                    <div class="bento-col" data-animate="fade-up">
+                        <div class="bento-item bento-stat">
+                            <div class="stat-number" data-target="1" data-suffix="">0</div>
+                            <div class="stat-label">Point of Contact</div>
+                        </div>
+                        <div class="bento-item bento-img">
+                            <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&q=80&w=800" alt="ORA Commercial Space">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floating Overlap Cards -->
+        <div class="container overlap-cards" style="position: relative; z-index: 10; margin-top: -60px; margin-bottom: 60px;" data-animate="fade-up">
+            <style>
+                .overlap-cards-grid {
+                    display: grid; 
+                    grid-template-columns: repeat(3, 1fr); 
+                    gap: 2rem;
+                }
+                @media (max-width: 992px) {
+                    .overlap-cards-grid {
+                        grid-template-columns: 1fr;
+                    }
+                    .overlap-cards {
+                        margin-top: -30px !important;
+                    }
+                }
+            </style>
+            <div class="overlap-cards-grid">
+                <!-- Card 1 -->
+                <div style="background-color: #ffffff; color: var(--color-dark-brown); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-top: 4px solid var(--color-luxury-gold);">
+                    <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Immersive Design</h4>
+                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6;">Merging aesthetic beauty with uncompromising functionality to elevate how you experience your space.</p>
+                </div>
+                <!-- Card 2 -->
+                <div style="background-color: #ffffff; color: var(--color-dark-brown); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-top: 4px solid var(--color-luxury-gold);">
+                    <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Transparent Process</h4>
+                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6;">Clear pricing, defined timelines, and absolute accountability from the first conversation to final handover.</p>
+                </div>
+                <!-- Card 3 -->
+                <div style="background-color: #ffffff; color: var(--color-dark-brown); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-top: 4px solid var(--color-luxury-gold);">
+                    <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Flawless Execution</h4>
+                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6;">A dedicated team of craftsmen and managers ensuring every detail is built exactly as envisioned.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: The Reality (Bento Grid) -->
+        <section class="section-padding">
+            <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
+                <span class="subtitle" data-animate="fade-up">THE REALITY</span>
+                <h2 class="heading-lg" data-animate="fade-up">Inspiration is easy. <br><span class="text-accent">Execution is hard.</span></h2>
+                <p style="margin: 2rem 0; font-size: 1.125rem; color: #555;" data-animate="fade-up">Most people spend months collecting ideas — and then face a completely different world when it's time to actually build. Here's what typically goes wrong:</p>
+            </div>
+            
+            <div class="container bento-grid" style="margin-top: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; grid-auto-rows: minmax(320px, auto);" data-animate="fade-up">
+                
+                <!-- Card 1: Top Left -->
+                <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; grid-column: 1; grid-row: 1;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 500;">Budgets that keep moving</h3>
+                    <p style="font-size: 0.9rem; color: #555; line-height: 1.6;">What starts at 8L ends at 14L. Unexpected costs arrive after work has already started — when walking away isn't an option.</p>
+                    <div style="margin-top: 2.5rem;">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="50" fill="#B8955D" fill-opacity="0.15"/>
+                            <path d="M20 50 C40 20, 60 80, 80 50" stroke="#B8955D" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+                            <path d="M30 65 C50 35, 70 95, 90 65" stroke="#B8955D" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                            <path d="M10 35 C30 5, 50 65, 70 35" stroke="#B8955D" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 2: Top Middle -->
+                <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; grid-column: 2; grid-row: 1;">
+                    <div style="width: 60px; height: 60px; background: radial-gradient(circle at 30% 30%, #E7DCCF, #5A4A3E); border-radius: 50%; margin-bottom: 2.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.08);"></div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 500;">Timelines that stretch</h3>
+                    <p style="font-size: 0.9rem; color: #555; line-height: 1.6;">"2 months" turns into 5. You're living out of boxes, working from disrupted offices, or delaying your opening.</p>
+                </div>
+
+                <!-- Card 3: Wide Card Bottom -->
+                <div style="border-radius: 1.5rem; padding: 3rem; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-align: center; position: relative; overflow: hidden; grid-column: 1 / span 2; grid-row: 2; min-height: 350px;">
+                    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&q=80&w=1200" alt="Workmanship" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%); z-index: 1;"></div>
+                    <div style="position: relative; z-index: 2; color: #fff; max-width: 500px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #fff; font-weight: 500;">Workmanship that disappoints</h3>
+                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.6;">The gap between what you were shown and what you received. Redone work. Renegotiated bills. Lingering regret.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Tall Card Right -->
+                <div style="background: radial-gradient(circle at 50% 0%, #8C7A6B 0%, #2A2520 100%); border-radius: 1.5rem; padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; grid-column: 3; grid-row: 1 / span 2; color: #fff;">
+                    <h3 style="font-size: 2.25rem; margin-bottom: 1.5rem; color: #fff; line-height: 1.2; font-family: var(--font-heading); font-weight: 400;">No single point of accountability</h3>
+                    <p style="font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.8;">Contractors, vendors, and suppliers operating without coordination. You become the project manager — without the expertise.</p>
+                    
+                    <div style="margin-top: 4rem; width: 1px; height: 80px; background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0));"></div>
+                </div>
+            </div>
+            
+            <style>
+                @media (max-width: 992px) {
+                    .bento-grid {
+                        grid-template-columns: 1fr 1fr !important;
+                    }
+                    .bento-grid > div:nth-child(4) {
+                        grid-column: 1 / span 2 !important;
+                        grid-row: 3 !important;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .bento-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                    .bento-grid > div {
+                        grid-column: 1 !important;
+                        grid-row: auto !important;
+                    }
+                }
+            </style>
+        </section>
+
+        <!-- Section: Segments Served (Bento Grid) -->
+        <section class="section-padding" style="background-color: var(--color-primary-cream); overflow: hidden;">
+            <div class="container text-center" style="max-width: 800px; margin: 0 auto 4rem; position: relative;">
+                <div style="position: relative; z-index: 1;">
+                    <span class="subtitle" data-animate="fade-up">WHO WE WORK WITH</span>
+                    <h2 class="heading-md" data-animate="fade-up" style="position: relative; display: inline-block;">Every space has a <span class="text-accent">different purpose.</span> <br>We understand that.</h2>
+                    <p style="margin-top: 1.5rem; font-size: 1.125rem; color: #555; line-height: 1.6;" data-animate="fade-up">The way a home should feel is different from the way a clinic should function. We think in outcomes, not just aesthetics.</p>
+                </div>
+            </div>
+            
+            <div class="container segments-bento" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; grid-auto-rows: minmax(280px, auto);" data-animate="fade-up">
+                
+                <!-- Left Tall Card: Residential -->
+                <div style="border-radius: 1.5rem; overflow: hidden; position: relative; grid-row: 1 / span 2; min-height: 600px; padding: 3rem; display: flex; flex-direction: column; justify-content: flex-end; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="Residential Interior" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%); z-index: 1;"></div>
+                    <div style="position: relative; z-index: 2; color: #fff;">
+                        <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading); font-weight: 400; color: #ffffff !important;">Residential</h3>
+                        <span class="subtitle" style="color: var(--color-luxury-gold); font-weight: 500; display: block; margin-bottom: 1rem; letter-spacing: 0.15em; font-size: 0.75rem;">Homes That Feel Like You</span>
+                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.9) !important; line-height: 1.6; margin-bottom: 2rem;">Your home should carry your identity — not look like a furniture catalogue. We build spaces that reflect how you actually live.</p>
+                        <div style="font-size: 0.75rem; color: var(--color-warm-beige); text-transform: uppercase; letter-spacing: 0.1em; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1.5rem; line-height: 1.8;">2 BHK · 3 BHK · 4 BHK · Villas · Bungalows</div>
+                    </div>
+                </div>
+
+                <!-- Right Top Card: Commercial -->
+                <div style="background-color: #fff; border-radius: 1.5rem; padding: 3rem; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.03);">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(184,149,93,0.1), transparent); border-radius: 50%; pointer-events: none;"></div>
+                    <h3 style="font-size: 2rem; margin-bottom: 0.5rem; font-family: var(--font-heading); font-weight: 400; color: var(--color-dark-brown);">Commercial</h3>
+                    <span class="subtitle" style="color: var(--color-luxury-gold); font-weight: 500; display: block; margin-bottom: 1rem; letter-spacing: 0.15em; font-size: 0.75rem;">Spaces That Work as Hard as You Do</span>
+                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6; margin-bottom: 2rem; max-width: 90%;">A well-designed workspace improves focus, signals credibility to clients, and communicates your company's culture without a word.</p>
+                    <div style="font-size: 0.75rem; color: var(--color-warm-beige); text-transform: uppercase; letter-spacing: 0.1em; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 1.5rem; line-height: 1.8;">Corporate Offices · Co-working · Clinics · Salons</div>
+                </div>
+
+                <!-- Right Bottom Card: Retail -->
+                <div style="background: radial-gradient(circle at 100% 100%, #8C7A6B 0%, #2A2520 100%); border-radius: 1.5rem; padding: 3rem; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; color: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 2rem; margin-bottom: 0.5rem; font-family: var(--font-heading); font-weight: 400; color: #fff;">Retail</h3>
+                    <span class="subtitle" style="color: rgba(255,255,255,0.7); font-weight: 500; display: block; margin-bottom: 1rem; letter-spacing: 0.15em; font-size: 0.75rem;">Environments That Sell</span>
+                    <p style="font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 2rem; max-width: 90%;">Your store, café, or restaurant is your brand made physical. The right environment drives dwell time, purchase intent, and loyalty.</p>
+                    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; line-height: 1.8;">Restaurants · Cafés · Fashion Stores · Jewellery Stores</div>
+                </div>
+
+            </div>
+
+            <style>
+                @media (max-width: 992px) {
+                    .segments-bento {
+                        grid-template-columns: 1fr !important;
+                    }
+                    .segments-bento > div {
+                        grid-row: auto !important;
+                        min-height: 350px;
+                    }
+                }
+            </style>
+        </section>
+
+        <!-- Section 7: How We Work (Premium Process Grid) -->
+        <section class="section-padding" style="background-color: var(--color-dark-brown); background-image: linear-gradient(rgba(184, 149, 93, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(184, 149, 93, 0.1) 1px, transparent 1px); background-size: 40px 40px; color: #fff; position: relative; overflow: hidden;">
+            
+            <div class="container" style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; padding: 0% !important;">
+                <div class="text-center" style="margin-bottom: 5rem;" data-animate="fade-up">
+                    <span class="subtitle" style="color: rgba(255,255,255,0.6); background-color: var(--color-dark-brown); padding: 0.5rem 1.5rem; display: inline-block;">HOW WE WORK</span>
+                    <h2 class="heading-md" style="color: #fff; margin-top: 1.5rem;">From <span style="color: var(--color-luxury-gold); font-style: italic; font-weight: 300;">first conversation</span> to final handover.</h2>
+                    <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 1.5rem auto 0; font-size: 1.05rem; line-height: 1.6;">Every ORA project follows a structured execution framework — so nothing falls through the cracks.</p>
+                </div>
+
+                <style>
+                    @media (max-width: 992px) {
+                        .how-we-work-grid { grid-template-columns: repeat(2, 1fr) !important; }
+                    }
+                    @media (max-width: 576px) {
+                        .how-we-work-grid { grid-template-columns: 1fr !important; }
+                    }
+                </style>
+                <div class="how-we-work-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;" data-animate="fade-up">
+                    
+                    <!-- Step 1 -->
+                    <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        <div style="position: absolute; top: -15px; right: -15px; font-size: 10rem; font-weight: 700; color: rgba(184, 149, 93, 0.15); font-family: var(--font-heading); line-height: 1; pointer-events: none; transition: color 0.4s ease;" onmouseover="this.style.color='rgba(184,149,93,0.3)'" onmouseout="this.style.color='rgba(184, 149, 93, 0.15)'">1</div>
+                        <div style="color: var(--color-dark-brown); font-size: 0.75rem; font-weight: 600; margin-bottom: 2rem; border-bottom: 1px solid rgba(184,149,93,0.3); padding-bottom: 1rem; display: inline-block; text-transform: uppercase; letter-spacing: 0.15em;">Phase 01</div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--color-dark-brown); font-family: var(--font-heading); font-weight: 400;">Discovery</h3>
+                        <p style="font-size: 0.95rem; color: #555; line-height: 1.7; position: relative; z-index: 2;">We listen. Your references, your lifestyle, your non-negotiables, your budget reality — everything shapes what comes next.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        <div style="position: absolute; top: -15px; right: -15px; font-size: 10rem; font-weight: 700; color: rgba(184, 149, 93, 0.15); font-family: var(--font-heading); line-height: 1; pointer-events: none; transition: color 0.4s ease;" onmouseover="this.style.color='rgba(184,149,93,0.3)'" onmouseout="this.style.color='rgba(184, 149, 93, 0.15)'">2</div>
+                        <div style="color: var(--color-dark-brown); font-size: 0.75rem; font-weight: 600; margin-bottom: 2rem; border-bottom: 1px solid rgba(184,149,93,0.3); padding-bottom: 1rem; display: inline-block; text-transform: uppercase; letter-spacing: 0.15em;">Phase 02</div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--color-dark-brown); font-family: var(--font-heading); font-weight: 400;">Design & Estimate</h3>
+                        <p style="font-size: 0.95rem; color: #555; line-height: 1.7; position: relative; z-index: 2;">Concept layouts, material selections, and a transparent scope-and-cost breakdown — before a single wall is touched.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        <div style="position: absolute; top: -15px; right: -15px; font-size: 10rem; font-weight: 700; color: rgba(184, 149, 93, 0.15); font-family: var(--font-heading); line-height: 1; pointer-events: none; transition: color 0.4s ease;" onmouseover="this.style.color='rgba(184,149,93,0.3)'" onmouseout="this.style.color='rgba(184, 149, 93, 0.15)'">3</div>
+                        <div style="color: var(--color-dark-brown); font-size: 0.75rem; font-weight: 600; margin-bottom: 2rem; border-bottom: 1px solid rgba(184,149,93,0.3); padding-bottom: 1rem; display: inline-block; text-transform: uppercase; letter-spacing: 0.15em;">Phase 03</div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--color-dark-brown); font-family: var(--font-heading); font-weight: 400;">Execution</h3>
+                        <p style="font-size: 0.95rem; color: #555; line-height: 1.7; position: relative; z-index: 2;">Our team coordinates all trades — civil, electrical, carpentry, finishing — under one roof. You get updates, not surprises.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        <div style="position: absolute; top: -15px; right: -15px; font-size: 10rem; font-weight: 700; color: rgba(184, 149, 93, 0.15); font-family: var(--font-heading); line-height: 1; pointer-events: none; transition: color 0.4s ease;" onmouseover="this.style.color='rgba(184,149,93,0.3)'" onmouseout="this.style.color='rgba(184, 149, 93, 0.15)'">4</div>
+                        <div style="color: var(--color-dark-brown); font-size: 0.75rem; font-weight: 600; margin-bottom: 2rem; border-bottom: 1px solid rgba(184,149,93,0.3); padding-bottom: 1rem; display: inline-block; text-transform: uppercase; letter-spacing: 0.15em;">Phase 04</div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--color-dark-brown); font-family: var(--font-heading); font-weight: 400;">Handover</h3>
+                        <p style="font-size: 0.95rem; color: #555; line-height: 1.7; position: relative; z-index: 2;">Punch list cleared. Final walkthrough done. Your space is ready to live in, work from, or open to customers.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Services (Pendant Light Design) -->
+        <section class="section-padding" style="background-color: var(--color-primary-cream); position: relative; overflow: hidden; text-align: center; padding-top: 4rem; padding-bottom: 8rem;">
+            
+            <!-- Faint ORA watermark -->
+            <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); font-size: 30vw; font-family: var(--font-heading); color: rgba(183, 168, 154, 0.15); z-index: 0; pointer-events: none; line-height: 1; letter-spacing: -0.02em;">ORA</div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
+                
+                <!-- Pendant Lamps & Title Wrapper -->
+                <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; position: relative; z-index: 3;" data-animate="fade-up">
+                    
+                    <!-- Lamp 1 -->
+                    <div style="position: relative; width: 240px; transform: translateY(-50px);">
+                        <!-- Cord -->
+                        <div style="position: absolute; top: -400px; left: 50%; width: 2px; height: 400px; background-color: #111; transform: translateX(-50%);"></div>
+                        <!-- Lamp Image -->
+                        <img src="assets/pendant_lamp_transparent.png" alt="Pendant Lamp" style="width: 100%; display: block; filter: contrast(1.1) brightness(0.9);">
+                        <!-- Light Beam Glow -->
+                        <div style="position: absolute; top: 85%; left: 50%; transform: translateX(-50%); width: 450px; height: 450px; background: radial-gradient(ellipse at top, rgba(255,248,200,0.7) 0%, rgba(255,250,220,0.3) 40%, transparent 70%); z-index: -1; pointer-events: none;"></div>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h2 style="font-family: var(--font-heading); font-size: 4.5rem; font-weight: 300; color: var(--color-dark-brown); margin: 0; position: relative; z-index: 4; transform: translateY(20px);">Services</h2>
+                    
+                    <!-- Lamp 2 -->
+                    <div style="position: relative; width: 240px; transform: translateY(-50px);">
+                        <!-- Cord -->
+                        <div style="position: absolute; top: -400px; left: 50%; width: 2px; height: 400px; background-color: #111; transform: translateX(-50%);"></div>
+                        <!-- Lamp Image -->
+                        <img src="assets/pendant_lamp_transparent.png" alt="Pendant Lamp" style="width: 100%; display: block; filter: contrast(1.1) brightness(0.9);">
+                        <!-- Light Beam Glow -->
+                        <div style="position: absolute; top: 85%; left: 50%; transform: translateX(-50%); width: 450px; height: 450px; background: radial-gradient(ellipse at top, rgba(255,248,200,0.7) 0%, rgba(255,250,220,0.3) 40%, transparent 70%); z-index: -1; pointer-events: none;"></div>
+                    </div>
+                    
+                </div>
+
+                <!-- Services Menu Row -->
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2rem; margin-top: 100px; position: relative; z-index: 4;" data-animate="fade-up">
+                    
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #555; font-size: 0.95rem; letter-spacing: 0.05em; cursor: pointer; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#555'">
+                        Landscaping
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    
+                    <div style="width: 1px; height: 24px; background-color: rgba(183, 168, 154, 0.5);"></div>
+                    
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #555; font-size: 0.95rem; letter-spacing: 0.05em; cursor: pointer; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#555'">
+                        Interior design
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    
+                    <div style="width: 1px; height: 24px; background-color: rgba(183, 168, 154, 0.5);"></div>
+                    
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #555; font-size: 0.95rem; letter-spacing: 0.05em; cursor: pointer; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#555'">
+                        Architectural design
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    
+                    <div style="width: 1px; height: 24px; background-color: rgba(183, 168, 154, 0.5);"></div>
+                    
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #555; font-size: 0.95rem; letter-spacing: 0.05em; cursor: pointer; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#555'">
+                        Turnkey renovation
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section-padding" style="background-color: var(--color-dark-brown); color: var(--color-off-white);">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;" data-animate="fade-up">
+                    <span class="subtitle" style="color: var(--color-warm-beige);">CLIENT EXPERIENCES</span>
+                    <h2 class="heading-md" style="color: var(--color-off-white);">What <span class="text-accent">living the result</span> feels like.</h2>
+                </div>
+                <div class="services-grid" style="gap: 2rem;">
+                    <div style="padding: 2rem; border-left: 1px solid var(--color-warm-beige);" data-animate="fade-up">
+                        <p style="font-style: italic; margin-bottom: 2rem;">"I had a folder of 400 reference images and no idea how to communicate them. ORA listened for two hours in the first meeting and somehow translated all of it into a home I didn't know I could afford to have."</p>
+                        <h4>Meera & Rohit S.</h4>
+                        <p style="font-size: 0.8rem; color: var(--color-warm-beige); text-transform: uppercase;">3 BHK, Andheri West <br>RESIDENTIAL</p>
+                    </div>
+                    <div style="padding: 2rem; border-left: 1px solid var(--color-warm-beige);" data-animate="fade-up">
+                        <p style="font-style: italic; margin-bottom: 2rem;">"We needed our clinic to feel reassuring and clinical at the same time. ORA understood that balance completely — they didn't need us to explain it twice. Delivered two weeks early."</p>
+                        <h4>Dr. Priya Nambiar</h4>
+                        <p style="font-size: 0.8rem; color: var(--color-warm-beige); text-transform: uppercase;">Dermatology Clinic, Bandra <br>COMMERCIAL</p>
+                    </div>
+                    <div style="padding: 2rem; border-left: 1px solid var(--color-warm-beige);" data-animate="fade-up">
+                        <p style="font-style: italic; margin-bottom: 2rem;">"We had a hard launch date — investors were coming. ORA hit it. Not approximately. On the day. The café looked exactly like what I had on my mood board, and footfall in week one exceeded projections."</p>
+                        <h4>Arjun Patel</h4>
+                        <p style="font-size: 0.8rem; color: var(--color-warm-beige); text-transform: uppercase;">Founder, Third Wave Café <br>RETAIL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: CTA Banner -->
+        <section class="section-padding" style="background-color: #E6DFD4; color: var(--color-dark-brown);">
+            <div class="container text-center" style="margin-bottom: 3rem;" data-animate="fade-up">
+                <h2 class="heading-lg" style="color: var(--color-dark-brown); font-size: 3.5rem; max-width: 800px; margin: 0 auto; line-height: 1.2;">Your space is waiting <br>to become real.</h2>
+            </div>
+            
+            <div class="container" style="position: relative; max-width: 1200px; margin: 0 auto;" data-animate="fade-up">
+                <!-- Main Image -->
+                <img src="assets/cta_interior_bg.png" alt="Interior Design" style="width: 100%; height: 600px; object-fit: cover; display: block; border-radius: 0.5rem; filter: brightness(0.9);">
+                
+                <!-- Main Glass Outline Overlay -->
+                <div style="position: absolute; top: 40px; left: 40px; right: 40px; bottom: 0; background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0)); border-top: 1px solid rgba(255,255,255,0.6); border-left: 1px solid rgba(255,255,255,0.6); border-right: 1px solid rgba(255,255,255,0.6); border-top-left-radius: 1.5rem; border-top-right-radius: 1.5rem; pointer-events: none;"></div>
+
+                <!-- Bottom UI container -->
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: flex-end; padding: 0 60px 40px 60px;">
+                    
+                    <!-- Left side: Button -->
+                    <div style="pointer-events: auto;">
+                        <a href="pages/contact.html" style="background-color: #2F3E46; color: #fff; padding: 1.2rem 2.5rem; border-radius: 0.5rem; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 0.75rem; text-decoration: none; transition: background-color 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" onmouseover="this.style.backgroundColor='#1a2429'" onmouseout="this.style.backgroundColor='#2F3E46'">
+                            Start the Conversation 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Right side: Glass box with info -->
+                    <div style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.4); padding: 2.5rem; border-radius: 1rem; max-width: 420px; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.4); pointer-events: auto; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                        <h3 style="font-family: var(--font-body); font-weight: 500; font-size: 1.4rem; margin-bottom: 1rem; color: #fff;">START YOUR PROJECT</h3>
+                        <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">Tell us what you're building — or what you've been dreaming about. A brief conversation is all it takes to understand if we're the right fit.</p>
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8); font-weight: 500;">hello@oraspaces.in<br>+91 XXXXX XXXXX</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: #E6DFD4; position: relative; overflow: hidden; padding: 6rem 1rem 12vw 1rem; color: var(--color-dark-brown);">
+        
+        <div class="container" style="position: relative; z-index: 1; max-width: 1400px; margin: 0 auto;">
+            <!-- Main Footer Card -->
+            <div style="background-color: #ffffff; border-radius: 1.5rem; padding: 5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);" data-animate="fade-up">
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4rem; margin-bottom: 5rem;">
+                    <!-- Left: Logo & Tagline -->
+                    <div style="max-width: 320px;">
+                        <a href="index.html" style="font-family: var(--font-heading); font-size: 2rem; font-weight: 500; color: var(--color-dark-brown); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="6" fill="var(--color-dark-brown)"/>
+                                <path d="M7 16L12 8L17 16" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 11L12 3L17 11" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            ORA.
+                        </a>
+                        <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
+                            Inspired by You, Built by Us. We help teams and families transform their blank spaces into clear, engaging realities — everything you need in one place.
+                        </p>
+                    </div>
+
+                    <!-- Right: Links Grid -->
+                    <div style="display: flex; gap: 6rem; flex-wrap: wrap; margin-left: auto;">
+                        <!-- Col 1 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Segments</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="pages/services.html" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#666'">Residential</a></li>
+                                <li><a href="pages/services.html" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#666'">Commercial</a></li>
+                                <li><a href="pages/services.html" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#666'">Retail Turnkey</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Col 2 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Services</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="pages/services.html" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#666'">Interior Execution</a></li>
+                                <li><a href="pages/services.html" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#666'">Home Automation</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 3 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Contact</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="mailto:hello@oraspaces.in" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#666'">hello@oraspaces.in</a></li>
+                                <li style="color: #666; font-size: 0.9rem;">Mumbai, Maharashtra</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div style="color: #888; font-size: 0.85rem;">
+                        &copy; 2025 ORA Spaces. All rights reserved.
+                    </div>
+                    <div style="display: flex; gap: 1.5rem;">
+                        <a href="#" style="color: #888; text-decoration: underline; font-size: 0.85rem; text-underline-offset: 4px; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#888'">Terms of Service</a>
+                        <a href="#" style="color: #888; text-decoration: underline; font-size: 0.85rem; text-underline-offset: 4px; transition: color 0.3s;" onmouseover="this.style.color='var(--color-dark-brown)'" onmouseout="this.style.color='#888'">Privacy Policy</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Massive Watermark Text at the absolute bottom -->
+        <div style="position: absolute; bottom: -2vw; left: 50%; transform: translateX(-50%); font-size: 26vw; font-weight: 800; font-family: var(--font-heading); color: rgba(0,0,0,0.04); white-space: nowrap; line-height: 1; pointer-events: none; user-select: none;">
+            ORA
+        </div>
+    </footer>
+
+    <!-- JS Module Script -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

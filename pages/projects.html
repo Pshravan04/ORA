@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects – ORA Interior Design</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">ORA</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="btn btn-outline">Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding" style="margin-top: 5rem;">
+            <div class="container text-center">
+                <h1 class="heading-xl" data-animate="fade-up">Selected <br><span class="text-accent">Works.</span></h1>
+                <p style="margin: 2rem auto; max-width: 600px;" data-animate="fade-up">A curated selection of our finest residential and commercial design projects, showcasing our commitment to elegance and detail.</p>
+            </div>
+        </section>
+
+        <section class="section-padding" style="padding-top: 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 4rem;">
+                    
+                    <a href="project-detail.html" class="project-card" style="width: 100%; min-width: 100%;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1200" alt="Minimalist Villa" class="project-card-img" style="height: 50vh;">
+                        <div class="project-card-info" style="color: var(--color-dark-brown);">
+                            <h3 style="color: var(--color-dark-brown);">The Minimalist Villa</h3>
+                            <p>Residential / Miami</p>
+                        </div>
+                    </a>
+
+                    <a href="project-detail.html" class="project-card" style="width: 100%; min-width: 100%;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=1200" alt="Penthouse Kitchen" class="project-card-img" style="height: 50vh;">
+                        <div class="project-card-info" style="color: var(--color-dark-brown);">
+                            <h3 style="color: var(--color-dark-brown);">Penthouse Kitchen</h3>
+                            <p>Residential / New York</p>
+                        </div>
+                    </a>
+
+                    <a href="project-detail.html" class="project-card" style="width: 100%; min-width: 100%;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1200" alt="Creative Studio" class="project-card-img" style="height: 50vh;">
+                        <div class="project-card-info" style="color: var(--color-dark-brown);">
+                            <h3 style="color: var(--color-dark-brown);">Creative Studio</h3>
+                            <p>Commercial / London</p>
+                        </div>
+                    </a>
+
+                    <a href="project-detail.html" class="project-card" style="width: 100%; min-width: 100%;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=1200" alt="Boutique Hotel" class="project-card-img" style="height: 50vh;">
+                        <div class="project-card-info" style="color: var(--color-dark-brown);">
+                            <h3 style="color: var(--color-dark-brown);">Boutique Hotel</h3>
+                            <p>Hospitality / Paris</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding cta-banner">
+            <div class="container" data-animate="fade-up">
+                <h2 class="heading-lg">Have a project in mind?</h2>
+                <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="../index.html" class="footer-logo">ORA</a>
+                    <p style="font-size: 0.875rem; color: var(--color-warm-beige);">Luxury interior design that transforms spaces into works of art.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Portfolio</h4>
+                    <ul>
+                        <li><a href="projects.html">All Projects</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 ORA Interior Design.
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
