@@ -41,6 +41,8 @@
 html {
   scroll-behavior: initial; /* Lenis handles this */
   font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -51,7 +53,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  width: 100%;
   position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 
@@ -62,6 +71,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 1.1;
   color: var(--color-dark-brown);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .text-accent {
@@ -73,10 +84,12 @@ p {
   font-weight: 300;
   font-size: 1.125rem;
   max-width: 65ch;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .heading-xl {
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(4rem, 8vw, 8rem);
   letter-spacing: -0.02em;
 }
 
@@ -107,7 +120,7 @@ p {
 }
 
 .section-padding {
-  padding: var(--space-xl) 0;
+  padding: 120px 0;
 }
 
 .flex { display: flex; }
@@ -178,11 +191,11 @@ a {
   top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 96%;
+  width: 90%;
   max-width: 1600px;
   background: var(--color-off-white);
   border-radius: 50px;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
@@ -289,7 +302,7 @@ a {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.8) 100%);
   z-index: 2;
 }
 
@@ -912,6 +925,7 @@ textarea.form-input {
 }
 .testimonial-card {
   width: 450px;
+  height: auto;
   background-color: var(--color-primary-cream);
   padding: 3rem;
   border-radius: 1.5rem;
@@ -938,6 +952,11 @@ textarea.form-input {
 
 /* --- Responsive --- */
 @media (max-width: 1024px) {
+  h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
+  p { line-height: 1.3; }
+  .heading-xl { font-size: clamp(3rem, 6vw, 5rem); }
+  .section-padding { padding: 90px 0; }
+  
   .split-editorial, .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -946,7 +965,7 @@ textarea.form-input {
     text-align: center;
   }
   .hero-3d-container {
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     position: relative;
   }
@@ -1081,6 +1100,9 @@ textarea.form-input {
   .stats-bento-grid {
     grid-template-columns: 1fr;
   }
+  .stats-bento-grid .bento-col:nth-child(even) {
+    flex-direction: column-reverse;
+  }
   
   /* Gallery overrides for mobile */
   .gallery-masonry,
@@ -1088,6 +1110,47 @@ textarea.form-input {
     grid-template-columns: 1fr;
     column-count: 1;
   }
+  
+  /* Soft gradient glow for pendant lamps */
+  .lamp-glow {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(255,248,200,0.5) 0%, rgba(255,250,220,0.2) 30%, transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .services-hero-lamps {
+    gap: 1rem !important;
+  }
+  .services-hero-lamps > h2 {
+    font-size: 2.5rem !important;
+  }
+  .services-hero-lamps > div {
+    width: 25vw !important;
+    max-width: 120px !important;
+    transform: translateY(-15px) !important;
+    flex-shrink: 0 !important;
+  }
+  .services-hero-lamps .lamp-glow {
+    width: 200px !important;
+    height: 200px !important;
+    top: 70% !important;
+    background: radial-gradient(circle, rgba(255,248,200,0.5) 0%, transparent 50%) !important;
+  }
+  .services-menu-row {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    margin-top: 60px !important;
+  }
+  .services-menu-separator {
+    display: none !important;
+  }
+  
   .gallery-bento-grid .gallery-wide {
     grid-column: 1 / -1;
   }
@@ -1099,17 +1162,27 @@ textarea.form-input {
     width: 80vw;
     min-width: unset;
   }
-  .heading-xl { font-size: clamp(2.5rem, 6vw, 4rem); }
+  .heading-xl { font-size: clamp(2rem, 8vw, 3.5rem); }
   .heading-lg { font-size: clamp(2rem, 5vw, 3rem); }
   .heading-md { font-size: clamp(1.75rem, 4vw, 2.5rem); }
-  .section-padding { padding: var(--space-md) 0; }
+  .section-padding { padding: 60px 0; }
+  h1, h2, h3, h4, h5, h6 { line-height: 1.3; }
+  p { line-height: 1.5; }
   
   .bento-grid {
     grid-template-columns: 1fr !important;
   }
-  .bento-grid > div {
+  .bento-grid > div,
+  .how-we-work-grid > div {
     grid-column: 1 !important;
     grid-row: auto !important;
+    width: 90%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .bento-grid-card,
+  .work-step-card {
+    padding: 2.5rem 1.5rem !important;
   }
   .how-we-work-grid { 
     grid-template-columns: 1fr !important; 
@@ -1120,5 +1193,73 @@ textarea.form-input {
   }
   .testimonial-card {
     width: 80vw;
+  }
+  
+  /* CTA Mobile Overrides */
+  .cta-title {
+    font-size: 2.2rem !important;
+  }
+  .cta-img {
+    height: auto !important;
+    min-height: 550px;
+  }
+  .cta-glass-overlay {
+    top: 20px !important;
+    left: 20px !important;
+    right: 20px !important;
+  }
+  .cta-bottom-ui {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    padding: 0 20px 40px 20px !important;
+    gap: 2rem !important;
+  }
+  .cta-glass-card {
+    padding: 1.5rem !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+
+  /* Footer Mobile Overrides */
+  footer {
+    padding: 4rem 1rem 15vw 1rem !important; /* Reduce massive top/bottom padding */
+  }
+  .footer-card {
+    padding: 2.5rem 1.5rem !important;
+  }
+  .footer-top-row {
+    gap: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+  .footer-brand {
+    max-width: 100% !important;
+    text-align: center;
+  }
+  .footer-brand a {
+    justify-content: center;
+  }
+  .footer-links-grid {
+    gap: 2.5rem !important;
+    margin-left: 0 !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .footer-links-grid > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .footer-link-list {
+    gap: 0.75rem !important;
+    align-items: center !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
   }
 }

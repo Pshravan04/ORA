@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLenis();
     initGSAP();
     initThreeJS();
-    initCustomCursor();
+    // initCustomCursor();
     initHeaderScroll();
     initMobileMenu();
 });
