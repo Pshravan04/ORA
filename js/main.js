@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initThreeJS();
     initCustomCursor();
     initHeaderScroll();
+    initMobileMenu();
 });
 
 // --- Smooth Scrolling (Lenis) ---
@@ -102,22 +103,45 @@ function initGSAP() {
     // Number Counter Stats
     const stats = document.querySelectorAll('.stat-number');
     stats.forEach(stat => {
-        const target = parseInt(stat.getAttribute('data-target'));
-        const suffix = stat.getAttribute('data-suffix') || '';
-        gsap.to(stat, {
+        const target = parseInt(stat.querySelector('.counter')?.getAttribute('data-target') || stat.getAttribute('data-target') || 0);
+        const counterEl = stat.querySelector('.counter') || stat;
+        
+        gsap.to(counterEl, {
             innerHTML: target,
-            duration: 2,
+            duration: 2.5,
             snap: { innerHTML: 1 },
-            ease: 'power1.inOut',
+            ease: 'power3.out',
             scrollTrigger: {
                 trigger: stat,
-                start: 'top 90%',
-            },
-            onUpdate: function() {
-                stat.innerHTML = Math.round(this.targets()[0].innerHTML) + suffix;
+                start: 'top 85%',
             }
         });
     });
+
+    // Interactive Vertical Timeline
+    const timelineItems = document.querySelectorAll('.js-timeline-item');
+    timelineItems.forEach((item, index) => {
+        ScrollTrigger.create({
+            trigger: item,
+            start: 'top 60%',
+            onEnter: () => item.classList.add('active'),
+            onLeaveBack: () => item.classList.remove('active')
+        });
+    });
+
+    // Testimonials Infinite Scroll
+    const testTrack = document.querySelector('#testimonials-track');
+    if (testTrack) {
+        // Clone for seamless loop
+        testTrack.innerHTML += testTrack.innerHTML;
+        
+        gsap.to(testTrack, {
+            x: '-50%',
+            ease: 'none',
+            duration: 20,
+            repeat: -1
+        });
+    }
 }
 
 // --- Three.js Integration (Luxury 3D Elements) ---
@@ -282,5 +306,61 @@ function initHeaderScroll() {
         } else {
             header.classList.remove('scrolled');
         }
+    });
+}
+
+// --- Mobile Menu Initialization ---
+function initMobileMenu() {
+    const headers = document.querySelectorAll('.site-header .header-inner');
+    if (!headers.length) return;
+
+    headers.forEach(headerInner => {
+        const mainNav = headerInner.querySelector('.main-nav');
+        if (!mainNav) return;
+
+        // Clone nav for mobile
+        const mobileNavWrapper = document.createElement('div');
+        mobileNavWrapper.className = 'mobile-menu-overlay';
+        
+        const mobileNav = mainNav.cloneNode(true);
+        mobileNav.className = 'mobile-nav';
+        mobileNavWrapper.appendChild(mobileNav);
+        document.body.appendChild(mobileNavWrapper);
+
+        // Add hamburger button to header actions
+        const headerActions = headerInner.querySelector('.header-actions') || headerInner;
+        headerActions.style.display = 'flex';
+        headerActions.style.alignItems = 'center';
+        headerActions.style.gap = '1rem';
+        
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'menu-toggle';
+        toggleBtn.setAttribute('aria-label', 'Toggle Menu');
+        toggleBtn.innerHTML = '<span></span><span></span><span></span>';
+        headerActions.appendChild(toggleBtn);
+
+        // Toggle logic
+        toggleBtn.addEventListener('click', () => {
+            const isActive = mobileNavWrapper.classList.contains('active');
+            if (isActive) {
+                mobileNavWrapper.classList.remove('active');
+                toggleBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            } else {
+                mobileNavWrapper.classList.add('active');
+                toggleBtn.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+        
+        // Close menu when a link is clicked
+        const mobileLinks = mobileNavWrapper.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNavWrapper.classList.remove('active');
+                toggleBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
     });
 }

@@ -16,8 +16,8 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container header-inner">
+    <header class="site-header floating-pill">
+        <div class="header-inner">
             <a href="../index.html" class="logo">ORA</a>
             <nav class="main-nav">
                 <ul>
@@ -36,88 +36,186 @@
     </header>
 
     <main>
-        <section class="section-padding" style="margin-top: 5rem;">
-            <div class="container text-center">
-                <h1 class="heading-xl" data-animate="fade-up">Let's <span class="text-accent">Connect.</span></h1>
-                <p style="margin: 2rem auto; max-width: 600px;" data-animate="fade-up">Whether you're looking to transform a single room or an entire estate, we are here to bring your vision to life.</p>
+        <!-- Cinematic Hero Section -->
+        <section style="padding: 12vw 5% 5vw 5%; background-color: var(--color-light-bg); position: relative; overflow: hidden; min-height: 70vh; display: flex; flex-direction: column; justify-content: center;">
+            <div class="container text-center" style="position: relative; z-index: 2;">
+                <p style="font-family: var(--font-body); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; color: #555;" data-animate="fade-up">Let's Connect</p>
+                <h1 style="font-family: var(--font-heading); font-size: clamp(4rem, 10vw, 8rem); font-weight: 400; line-height: 1; margin-bottom: 2rem; color: var(--color-dark-brown); letter-spacing: -0.02em;" data-animate="fade-up">Get In <span style="font-style: italic; color: #a18866;">Touch</span>.</h1>
+                <p style="font-family: var(--font-body); font-size: clamp(1.1rem, 2vw, 1.25rem); color: #555; max-width: 600px; margin: 0 auto; line-height: 1.6;" data-animate="fade-up">
+                    Whether you're looking to transform a single room or an entire estate, we are here to bring your vision to life.
+                </p>
             </div>
         </section>
 
-        <section class="section-padding" style="padding-top: 0;">
-            <div class="container split-editorial">
-                
-                <!-- Contact Details -->
-                <div class="editorial-content">
-                    <div style="margin-bottom: 3rem;" data-animate="fade-up">
-                        <span class="subtitle">The Studio</span>
-                        <h3 class="heading-md">New York</h3>
-                        <p style="margin-top: 1rem;">123 Luxury Avenue, Suite 400<br>New York, NY 10012</p>
-                    </div>
-                    <div style="margin-bottom: 3rem;" data-animate="fade-up">
-                        <span class="subtitle">Contact</span>
-                        <p style="font-size: 1.25rem;">inquiries@oradesign.com</p>
-                        <p style="font-size: 1.25rem;">+1 (212) 555-0198</p>
-                    </div>
-                    <div data-animate="fade-up">
-                        <span class="subtitle">Follow Us</span>
-                        <p>Instagram / Pinterest / LinkedIn</p>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div style="background-color: var(--color-primary-cream); padding: 4rem; position: relative;" data-animate="fade-up">
-                    <h3 class="heading-md" style="margin-bottom: 2rem;">Inquire</h3>
-                    <form class="contact-form">
-                        <input type="text" class="form-input" placeholder="Your Name" required>
-                        <input type="email" class="form-input" placeholder="Your Email" required>
-                        <select class="form-input" style="appearance: none;">
-                            <option>Residential Project</option>
-                            <option>Commercial Project</option>
-                            <option>Bespoke Furniture</option>
-                            <option>Other</option>
-                        </select>
-                        <textarea class="form-input" placeholder="Tell us about your project..."></textarea>
-                        <button type="submit" class="btn btn-primary" style="margin-top: 2rem; width: 100%;">Submit Inquiry</button>
-                    </form>
-                </div>
-
+        <!-- Main Image below hero -->
+        <section style="padding: 0 5%; margin-top: -5vw; position: relative; z-index: 3;" data-animate="fade-up">
+            <div style="border-radius: 1.5rem; overflow: hidden; height: 60vh; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000" alt="ORA Studio" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9);" data-parallax="true">
             </div>
         </section>
 
-        <!-- Studio Map (Image Placeholder for Map) -->
-        <section style="height: 60vh; overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=2000" alt="Map View" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(120%);" data-parallax="true">
+        <!-- Contact Section -->
+        <section class="section-padding" style="background-color: var(--color-light-bg);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: start;">
+                    
+                    <!-- Left: Contact Details -->
+                    <div style="padding-right: 2rem;" data-animate="fade-up">
+                        <h2 style="font-family: var(--font-heading); font-size: 3rem; color: var(--color-dark-brown); margin-bottom: 3rem; font-weight: 500;">Start a<br><span style="font-style: italic; color: #a18866;">Conversation</span>.</h2>
+                        
+                        <div style="margin-bottom: 3rem;">
+                            <h4 style="font-family: var(--font-body); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 1rem;">The Studio</h4>
+                            <p style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-dark-brown); margin-bottom: 0.5rem;">Mumbai</p>
+                            <p style="font-family: var(--font-body); font-size: 1.1rem; color: #555; line-height: 1.6;">
+                                Bandra Kurla Complex (BKC)<br>
+                                Mumbai, Maharashtra 400051<br>
+                                India
+                            </p>
+                        </div>
+                        
+                        <div style="margin-bottom: 3rem;">
+                            <h4 style="font-family: var(--font-body); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 1rem;">Contact</h4>
+                            <p style="font-family: var(--font-body); font-size: 1.1rem; color: #555; line-height: 1.6;">
+                                <a href="mailto:hello@oraspaces.in" style="color: var(--color-dark-brown); text-decoration: none; border-bottom: 1px solid #a18866; padding-bottom: 2px;">hello@oraspaces.in</a><br><br>
+                                +91 98765 43210
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 style="font-family: var(--font-body); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 1rem;">Socials</h4>
+                            <div style="display: flex; gap: 1.5rem;">
+                                <a href="#" style="color: var(--color-dark-brown); text-decoration: none; font-weight: 500;">Instagram</a>
+                                <a href="#" style="color: var(--color-dark-brown); text-decoration: none; font-weight: 500;">Pinterest</a>
+                                <a href="#" style="color: var(--color-dark-brown); text-decoration: none; font-weight: 500;">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Form Box -->
+                    <div style="background-color: #ffffff; padding: 4rem; border-radius: 1.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);" data-animate="fade-up">
+                        <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--color-dark-brown); margin-bottom: 2rem; font-weight: 500;">Inquire</h3>
+                        <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem;">
+                                <div>
+                                    <label style="display: block; font-family: var(--font-body); font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">First Name</label>
+                                    <input type="text" style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: var(--font-body); font-size: 1rem; outline: none; transition: border-color 0.3s ease; box-sizing: border-box;" onfocus="this.style.borderColor='#a18866'" onblur="this.style.borderColor='#ddd'" required>
+                                </div>
+                                <div>
+                                    <label style="display: block; font-family: var(--font-body); font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Last Name</label>
+                                    <input type="text" style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: var(--font-body); font-size: 1rem; outline: none; transition: border-color 0.3s ease; box-sizing: border-box;" onfocus="this.style.borderColor='#a18866'" onblur="this.style.borderColor='#ddd'" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label style="display: block; font-family: var(--font-body); font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Email Address</label>
+                                <input type="email" style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: var(--font-body); font-size: 1rem; outline: none; transition: border-color 0.3s ease; box-sizing: border-box;" onfocus="this.style.borderColor='#a18866'" onblur="this.style.borderColor='#ddd'" required>
+                            </div>
+                            
+                            <div>
+                                <label style="display: block; font-family: var(--font-body); font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Project Type</label>
+                                <select style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: var(--font-body); font-size: 1rem; outline: none; appearance: none; background: url('data:image/svg+xml;utf8,<svg fill=%22%23888%22 height=%2224%22 viewBox=%220 0 24 24%22 width=%2224%22 xmlns=%22http://www.w3.org/2000/svg%22><path d=%22M7 10l5 5 5-5z%22/><path d=%22M0 0h24v24H0z%22 fill=%22none%22/></svg>') no-repeat right 1rem center; background-color: white; transition: border-color 0.3s ease; box-sizing: border-box;" onfocus="this.style.borderColor='#a18866'" onblur="this.style.borderColor='#ddd'">
+                                    <option>Residential Project</option>
+                                    <option>Commercial Space</option>
+                                    <option>Turnkey Execution</option>
+                                    <option>Bespoke Furniture</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label style="display: block; font-family: var(--font-body); font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Message</label>
+                                <textarea rows="5" style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: var(--font-body); font-size: 1rem; outline: none; resize: vertical; transition: border-color 0.3s ease; box-sizing: border-box;" onfocus="this.style.borderColor='#a18866'" onblur="this.style.borderColor='#ddd'" placeholder="Tell us a bit about your space and vision..."></textarea>
+                            </div>
+                            
+                            <button type="submit" style="background-color: var(--color-dark-brown); color: white; border: none; padding: 1.25rem 2.5rem; font-family: var(--font-body); font-size: 1rem; font-weight: 500; border-radius: 3rem; cursor: pointer; transition: all 0.3s ease; margin-top: 1rem;" onmouseover="this.style.backgroundColor='#a18866'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='var(--color-dark-brown)'; this.style.transform='translateY(0)'">
+                                Send Inquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- Studio Map (Google Maps Embed) -->
+        <section style="padding: 0 5% 5vw 5%; background-color: var(--color-light-bg);" data-animate="fade-up">
+            <div style="border-radius: 1.5rem; overflow: hidden; height: 60vh; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid rgba(0,0,0,0.05);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15082.955986877014!2d72.85966455!3d19.0642784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8e123f8d27b%3A0x437996b49a236a78!2sBandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1701334586329!5m2!1sen!2sin" width="100%" height="100%" style="border:0; filter: grayscale(80%) contrast(1.1) brightness(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <a href="../index.html" class="footer-logo">ORA</a>
-                    <p style="font-size: 0.875rem; color: var(--color-warm-beige);">Luxury interior design that transforms spaces into works of art.</p>
+    <footer style="background-color: #E6DFD4; position: relative; overflow: hidden; padding: 6rem 1rem 12vw 1rem; color: var(--color-dark-brown);">
+        
+        <div class="container" style="position: relative; z-index: 1; max-width: 1400px; margin: 0 auto;">
+            <!-- Main Footer Card -->
+            <div style="background-color: #ffffff; border-radius: 1.5rem; padding: 5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);" data-animate="fade-up">
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4rem; margin-bottom: 5rem;">
+                    <!-- Left: Logo & Tagline -->
+                    <div style="max-width: 320px;">
+                        <a href="../index.html" style="font-family: var(--font-heading); font-size: 2rem; font-weight: 500; color: var(--color-dark-brown); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="6" fill="var(--color-dark-brown)"/>
+                                <path d="M7 16L12 8L17 16" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 11L12 3L17 11" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            ORA.
+                        </a>
+                        <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
+                            Inspired by You, Built by Us. We help teams and families transform their blank spaces into clear, engaging realities — everything you need in one place.
+                        </p>
+                    </div>
+
+                    <!-- Right: Links Grid -->
+                    <div style="display: flex; gap: 6rem; flex-wrap: wrap; margin-left: auto;">
+                        <!-- Col 1 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Segments</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Residential</a></li>
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Commercial</a></li>
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Retail Turnkey</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Col 2 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Services</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Interior Execution</a></li>
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Home Automation</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 3 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Contact</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="mailto:hello@oraspaces.in" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">hello@oraspaces.in</a></li>
+                                <li style="color: #666; font-size: 0.9rem;">Mumbai, Maharashtra</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                    </ul>
+
+                <!-- Bottom Bar -->
+                <div style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div style="color: #888; font-size: 0.85rem;">
+                        &copy; 2025 ORA Spaces. All rights reserved.
+                    </div>
+                    <div style="display: flex; gap: 1.5rem;">
+                        <a href="#" class="hover-text-dark" style="color: #888; text-decoration: underline; font-size: 0.85rem; text-underline-offset: 4px;">Terms of Service</a>
+                        <a href="#" class="hover-text-dark" style="color: #888; text-decoration: underline; font-size: 0.85rem; text-underline-offset: 4px;">Privacy Policy</a>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Portfolio</h4>
-                    <ul>
-                        <li><a href="projects.html">All Projects</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                    </ul>
-                </div>
+
             </div>
-            <div class="footer-bottom">
-                &copy; 2026 ORA Interior Design.
-            </div>
+        </div>
+
+        <!-- Massive Watermark Text at the absolute bottom -->
+        <div style="position: absolute; bottom: -2vw; left: 50%; transform: translateX(-50%); font-size: 26vw; font-weight: 800; font-family: var(--font-heading); color: rgba(0,0,0,0.04); white-space: nowrap; line-height: 1; pointer-events: none; user-select: none;">
+            ORA
         </div>
     </footer>
 

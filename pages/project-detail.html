@@ -16,8 +16,8 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container header-inner">
+    <header class="site-header floating-pill">
+        <div class="header-inner">
             <a href="../index.html" class="logo">ORA</a>
             <nav class="main-nav">
                 <ul>
@@ -36,12 +36,31 @@
     </header>
 
     <main>
-        <!-- Cinematic Hero -->
-        <section class="project-hero">
-            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=2000" alt="Minimalist Villa" class="project-hero-bg" data-parallax="true">
+        <!-- Hero -->
+        <section class="section-padding" style="padding-top: 10rem; background-color: var(--color-off-white);">
             <div class="container">
-                <span class="subtitle" style="color: var(--color-luxury-gold);" data-animate="fade-up">Residential / Miami</span>
-                <h1 class="heading-xl" data-animate="fade-up">The Minimalist <br><span class="text-accent">Villa.</span></h1>
+                <!-- Top Header Row -->
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 2rem;">
+                    <h1 style="font-family: var(--font-body); font-weight: 700; font-size: clamp(4rem, 15vw, 12rem); line-height: 0.8; letter-spacing: -0.05em; color: #222; text-transform: uppercase; margin: 0;" data-animate="fade-up">PROJECT</h1>
+                    <div style="max-width: 300px; padding-bottom: 1rem;" data-animate="fade-up" style="transition-delay: 0.1s;">
+                        <p style="font-size: 1.5rem; font-weight: 600; line-height: 1.2; color: var(--color-dark-brown); margin-bottom: 1rem;">
+                            The Minimalist <span class="text-accent" style="font-weight: 400;">Villa.</span>
+                        </p>
+                        <a href="projects.html" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-luxury-gold); font-weight: 600; border-bottom: 1px solid var(--color-luxury-gold); padding-bottom: 2px;">BACK TO PROJECTS ></a>
+                    </div>
+                </div>
+
+                <!-- Main Image -->
+                <div style="position: relative; width: 100%; border-radius: 2rem; overflow: hidden; margin-bottom: 5rem; height: 60vh; min-height: 400px;" data-animate="fade-up">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=2000" alt="Minimalist Villa" style="width: 100%; height: 100%; object-fit: cover;" data-parallax="true">
+                    
+                    <!-- Play Button Overlay -->
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background-color: rgba(184, 149, 93, 0.8); border: 2px solid rgba(255,255,255,0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(5px); transition: transform 0.3s ease;" class="hover-scale">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 4px;">
+                            <path d="M5 3L19 12L5 21V3Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -50,78 +69,162 @@
             <div class="container split-editorial">
                 <div class="editorial-content">
                     <span class="subtitle" data-animate="fade-up">The Challenge</span>
-                    <h2 class="heading-md" data-animate="fade-up">Merging interior warmth with <br>exterior architecture.</h2>
-                    <p style="margin: 2rem 0;" data-animate="fade-up">The client requested a sanctuary that felt incredibly open to the stunning Miami coastline while maintaining a high degree of privacy and warmth. The challenge was integrating raw, architectural materials like concrete with soft, luxurious furnishings.</p>
+                    <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; color: var(--color-dark-brown); margin-top: 1rem;" data-animate="fade-up">Merging interior warmth with <br><span style="font-style: italic; color: var(--color-luxury-gold);">exterior architecture.</span></h2>
+                    <p style="margin: 2rem 0; font-size: 1.1rem; line-height: 1.7; color: var(--color-dark-brown);" data-animate="fade-up">The client requested a sanctuary that felt incredibly open to the stunning Miami coastline while maintaining a high degree of privacy and warmth. The challenge was integrating raw, architectural materials like concrete with soft, luxurious furnishings.</p>
                 </div>
-                <div class="stats-grid" style="grid-template-columns: 1fr; gap: 2rem;" data-animate="fade-up">
-                    <div style="text-align: left; border-bottom: 1px solid var(--color-warm-beige); padding-bottom: 1rem;">
-                        <span class="subtitle">Location</span>
-                        <p>Miami, Florida</p>
+                <div style="background-color: var(--color-dark-brown); color: var(--color-primary-cream); padding: 3rem; border-radius: 1rem; display: flex; flex-direction: column; justify-content: center;" data-animate="fade-up">
+                    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                        <span class="subtitle" style="color: var(--color-luxury-gold); font-size: 0.9rem;">Location</span>
+                        <p style="font-family: var(--font-heading); font-size: 1.5rem; margin-top: 0.5rem; font-weight: 400;">Miami, Florida</p>
                     </div>
-                    <div style="text-align: left; border-bottom: 1px solid var(--color-warm-beige); padding-bottom: 1rem;">
-                        <span class="subtitle">Area</span>
-                        <p>8,500 Sq Ft</p>
+                    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                        <span class="subtitle" style="color: var(--color-luxury-gold); font-size: 0.9rem;">Area</span>
+                        <p style="font-family: var(--font-heading); font-size: 1.5rem; margin-top: 0.5rem; font-weight: 400;">8,500 Sq Ft</p>
                     </div>
-                    <div style="text-align: left; border-bottom: 1px solid var(--color-warm-beige); padding-bottom: 1rem;">
-                        <span class="subtitle">Completed</span>
-                        <p>2025</p>
+                    <div>
+                        <span class="subtitle" style="color: var(--color-luxury-gold); font-size: 0.9rem;">Completed</span>
+                        <p style="font-family: var(--font-heading); font-size: 1.5rem; margin-top: 0.5rem; font-weight: 400;">2025</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Full Width Image -->
-        <section style="height: 80vh; overflow: hidden;">
+        <section style="height: 80vh; overflow: hidden; border-radius: 1rem; margin: 0 5%;">
             <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000" alt="Living Room Detail" style="width: 100%; height: 100%; object-fit: cover;" data-parallax="true">
         </section>
 
         <!-- Materials & Process -->
-        <section class="section-padding" style="background-color: var(--color-primary-cream);">
+        <section class="section-padding">
             <div class="container split-editorial">
-                <div class="editorial-img-wrap" data-parallax="true">
-                    <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=800" alt="Material Detail">
+                <div style="border-radius: 1rem; overflow: hidden;" data-parallax="true">
+                    <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=800" alt="Material Detail" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                 </div>
                 <div class="editorial-content">
                     <span class="subtitle" data-animate="fade-up">Materials</span>
-                    <h2 class="heading-md" data-animate="fade-up">Tactile <br><span class="text-accent">Luxury.</span></h2>
-                    <p style="margin: 2rem 0;" data-animate="fade-up">We curated a palette of honed travertines, brushed brass, and bleached oak. The textures were chosen to catch the abundant natural light, creating shifting shadows throughout the day that make the space feel alive.</p>
+                    <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; color: var(--color-dark-brown); margin-top: 1rem;" data-animate="fade-up">Tactile <br><span style="font-style: italic; color: var(--color-luxury-gold);">Luxury.</span></h2>
+                    <p style="margin: 2rem 0; font-size: 1.1rem; line-height: 1.7; color: var(--color-dark-brown);" data-animate="fade-up">We curated a palette of honed travertines, brushed brass, and bleached oak. The textures were chosen to catch the abundant natural light, creating shifting shadows throughout the day that make the space feel alive.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Gallery / Masonry -->
-        <section class="section-padding">
+        <!-- Gallery -->
+        <section class="section-padding" style="padding-top: 0;">
             <div class="container">
-                <div class="gallery-masonry">
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=600" alt="Detail 1"></div>
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="Detail 2"></div>
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=600" alt="Detail 3"></div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="border-radius: 1rem; overflow: hidden; aspect-ratio: 4/5;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=600" alt="Detail 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                    <div style="border-radius: 1rem; overflow: hidden; aspect-ratio: 4/5;" data-animate="fade-up" style="transition-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="Detail 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                    <div style="border-radius: 1rem; overflow: hidden; aspect-ratio: 4/5;" data-animate="fade-up" style="transition-delay: 0.2s;">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=600" alt="Detail 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="section-padding cta-banner">
-            <div class="container" data-animate="fade-up">
-                <h2 class="heading-lg">Next Project</h2>
-                <a href="project-detail.html" class="btn btn-primary">Penthouse Kitchen &rarr;</a>
+        <!-- Pendant Light Design & Next Project CTA -->
+        <section class="section-padding" style="background-color: var(--color-primary-cream); position: relative; overflow: hidden; text-align: center; padding-top: 4rem; padding-bottom: 8rem;">
+            <!-- Faint ORA watermark -->
+            <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); font-size: 30vw; font-family: var(--font-heading); color: rgba(183, 168, 154, 0.15); z-index: 0; pointer-events: none; line-height: 1; letter-spacing: -0.02em;">ORA</div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
+                <!-- Pendant Lamps & Title Wrapper -->
+                <div style="display: flex; justify-content: center; align-items: center; gap: clamp(5rem, 30vw, 25rem); position: relative; z-index: 3;" data-animate="fade-up">
+                    <div style="position: relative; width: 240px; transform: translateY(-50px);">
+                        <div style="position: absolute; top: -400px; left: 50%; width: 2px; height: 400px; background-color: #111; transform: translateX(-50%);"></div>
+                        <img src="../assets/pendant_lamp_transparent.png" alt="Pendant Lamp" style="width: 100%; display: block; filter: contrast(1.1) brightness(0.9);">
+                        <div style="position: absolute; top: 85%; left: 50%; transform: translateX(-50%); width: 450px; height: 450px; background: radial-gradient(ellipse at top, rgba(255,248,200,0.7) 0%, rgba(255,250,220,0.3) 40%, transparent 70%); z-index: -1; pointer-events: none;"></div>
+                    </div>
+                    <div style="position: relative; width: 240px; transform: translateY(-10px);">
+                        <div style="position: absolute; top: -400px; left: 50%; width: 2px; height: 400px; background-color: #111; transform: translateX(-50%);"></div>
+                        <img src="../assets/pendant_lamp_transparent.png" alt="Pendant Lamp" style="width: 100%; display: block; filter: contrast(1.1) brightness(0.9);">
+                        <div style="position: absolute; top: 85%; left: 50%; transform: translateX(-50%); width: 450px; height: 450px; background: radial-gradient(ellipse at top, rgba(255,248,200,0.7) 0%, rgba(255,250,220,0.3) 40%, transparent 70%); z-index: -1; pointer-events: none;"></div>
+                    </div>
+                </div>
+                
+                <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.5rem); color: var(--color-dark-brown); font-weight: 500; margin-top: -2rem; position: relative; z-index: 4;" data-animate="fade-up">Next Project</h2>
+                <div style="margin-top: 3rem; position: relative; z-index: 4;" data-animate="fade-up">
+                    <a href="project-detail.html" class="btn btn-primary" style="background-color: var(--color-dark-brown); color: var(--color-primary-cream); padding: 1rem 3rem; border: none; font-size: 1.1rem;">Penthouse Kitchen &rarr;</a>
+                </div>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <a href="../index.html" class="footer-logo">ORA</a>
-                    <p style="font-size: 0.875rem; color: var(--color-warm-beige);">Luxury interior design that transforms spaces into works of art.</p>
+    <footer style="background-color: #E6DFD4; position: relative; overflow: hidden; padding: 6rem 1rem 12vw 1rem; color: var(--color-dark-brown);">
+        
+        <div class="container" style="position: relative; z-index: 1; max-width: 1400px; margin: 0 auto;">
+            <!-- Main Footer Card -->
+            <div style="background-color: #ffffff; border-radius: 1.5rem; padding: 5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);" data-animate="fade-up">
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4rem; margin-bottom: 5rem;">
+                    <!-- Left: Logo & Tagline -->
+                    <div style="max-width: 320px;">
+                        <a href="../index.html" style="font-family: var(--font-heading); font-size: 2rem; font-weight: 500; color: var(--color-dark-brown); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="6" fill="var(--color-dark-brown)"/>
+                                <path d="M7 16L12 8L17 16" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 11L12 3L17 11" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            ORA.
+                        </a>
+                        <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
+                            Inspired by You, Built by Us. We help teams and families transform their blank spaces into clear, engaging realities — everything you need in one place.
+                        </p>
+                    </div>
+
+                    <!-- Right: Links Grid -->
+                    <div style="display: flex; gap: 6rem; flex-wrap: wrap; margin-left: auto;">
+                        <!-- Col 1 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Segments</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Residential</a></li>
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Commercial</a></li>
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Retail Turnkey</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Col 2 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Services</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Interior Execution</a></li>
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Home Automation</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 3 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Contact</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="mailto:hello@oraspaces.in" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">hello@oraspaces.in</a></li>
+                                <li style="color: #666; font-size: 0.9rem;">Mumbai, Maharashtra</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Bottom Bar -->
+                <div style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div style="color: #888; font-size: 0.85rem;">
+                        &copy; 2025 ORA Spaces. All rights reserved.
+                    </div>
+                    <div style="display: flex; gap: 1.5rem;">
+                        <a href="#" class="hover-text-dark" style="color: #888; text-decoration: underline; font-size: 0.85rem; text-underline-offset: 4px;">Terms of Service</a>
+                        <a href="#" class="hover-text-dark" style="color: #888; text-decoration: underline; font-size: 0.85rem; text-underline-offset: 4px;">Privacy Policy</a>
+                    </div>
+                </div>
+
             </div>
-            <div class="footer-bottom">
-                &copy; 2026 ORA Interior Design.
-            </div>
+        </div>
+
+        <!-- Massive Watermark Text at the absolute bottom -->
+        <div style="position: absolute; bottom: -2vw; left: 50%; transform: translateX(-50%); font-size: 26vw; font-weight: 800; font-family: var(--font-heading); color: rgba(0,0,0,0.04); white-space: nowrap; line-height: 1; pointer-events: none; user-select: none;">
+            ORA
         </div>
     </footer>
 

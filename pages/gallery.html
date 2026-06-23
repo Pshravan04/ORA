@@ -16,8 +16,8 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container header-inner">
+    <header class="site-header floating-pill">
+        <div class="header-inner">
             <a href="../index.html" class="logo">ORA</a>
             <nav class="main-nav">
                 <ul>
@@ -36,51 +36,201 @@
     </header>
 
     <main>
-        <section class="section-padding" style="margin-top: 5rem; border-bottom: 1px solid var(--color-warm-beige);">
-            <div class="container text-center">
-                <h1 class="heading-xl" data-animate="fade-up">The <span class="text-accent">Gallery.</span></h1>
-                <p style="margin: 2rem auto; max-width: 600px;" data-animate="fade-up">An immersive visual journey through our finest details, bespoke furniture pieces, and architectural moments.</p>
+        <!-- Hero -->
+        <section class="section-padding" style="padding-top: 10rem; background-color: var(--color-off-white);">
+            <div class="container">
+                <!-- Top Header Row -->
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 2rem;">
+                    <h1 style="font-family: var(--font-body); font-weight: 700; font-size: clamp(4rem, 15vw, 12rem); line-height: 0.8; letter-spacing: -0.05em; color: #222; text-transform: uppercase; margin: 0;" data-animate="fade-up">GALLERY</h1>
+                    <div style="max-width: 300px; padding-bottom: 1rem;" data-animate="fade-up" style="transition-delay: 0.1s;">
+                        <p style="font-size: 1.5rem; font-weight: 600; line-height: 1.2; color: var(--color-dark-brown); margin-bottom: 1rem;">
+                            Visual <span class="text-accent" style="font-weight: 400;">Journey.</span>
+                        </p>
+                        <a href="contact.html" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-luxury-gold); font-weight: 600; border-bottom: 1px solid var(--color-luxury-gold); padding-bottom: 2px;">START A PROJECT ></a>
+                    </div>
+                </div>
+
+                <!-- Main Image -->
+                <div style="position: relative; width: 100%; border-radius: 2rem; overflow: hidden; margin-bottom: 0rem; height: 60vh; min-height: 400px;" data-animate="fade-up">
+                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=2000" alt="ORA Gallery" style="width: 100%; height: 100%; object-fit: cover;" data-parallax="true">
+                </div>
             </div>
         </section>
 
-        <!-- Artistic Gallery Masonry -->
-        <section class="section-padding">
+        <!-- Filters & Gallery -->
+        <section class="section-padding" style="background-color: var(--color-off-white); padding-top: 2rem;">
             <div class="container">
-                <div class="gallery-masonry">
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=800" alt="Gallery 1"></div>
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800" alt="Gallery 2"></div>
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Gallery 3"></div>
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800" alt="Gallery 4"></div>
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=800" alt="Gallery 5"></div>
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800" alt="Gallery 6"></div>
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800" alt="Gallery 7"></div>
-                    <div class="gallery-item" data-animate="fade-up"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800" alt="Gallery 8"></div>
+                <!-- Filters -->
+                <div style="display: flex; gap: 1rem; margin-bottom: 4rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: none;" data-animate="fade-up">
+                    <button style="padding: 0.75rem 2rem; border-radius: 2rem; background: var(--color-dark-brown); color: var(--color-primary-cream); border: none; font-size: 0.9rem; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.3s ease;">All</button>
+                    <button style="padding: 0.75rem 2rem; border-radius: 2rem; background: rgba(0,0,0,0.05); color: var(--color-dark-brown); border: 1px solid transparent; font-size: 0.9rem; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">Residential</button>
+                    <button style="padding: 0.75rem 2rem; border-radius: 2rem; background: rgba(0,0,0,0.05); color: var(--color-dark-brown); border: 1px solid transparent; font-size: 0.9rem; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">Commercial</button>
+                    <button style="padding: 0.75rem 2rem; border-radius: 2rem; background: rgba(0,0,0,0.05); color: var(--color-dark-brown); border: 1px solid transparent; font-size: 0.9rem; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">Turnkey Execution</button>
+                    <button style="padding: 0.75rem 2rem; border-radius: 2rem; background: rgba(0,0,0,0.05); color: var(--color-dark-brown); border: 1px solid transparent; font-size: 0.9rem; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">Bespoke Furniture</button>
+                </div>
+
+                <!-- Bento / Masonry Gallery -->
+                <div class="gallery-bento-grid">
+                    
+                    <!-- Item 1 (Wide) -->
+                    <div class="hover-scale gallery-wide gallery-tall" style="position: relative; border-radius: 1.5rem; overflow: hidden; cursor: pointer; background: #ddd;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=1200" alt="Gallery" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.previousElementSibling ? this.previousElementSibling.style.transform='scale(1.05)' : null">
+                        <!-- To make inline hover effects work safely with child elements, I will wrap them carefully -->
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem;" onmouseover="this.style.opacity='1'; this.previousElementSibling.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0'; this.previousElementSibling.style.transform='scale(1)';">
+                            <span style="color: var(--color-luxury-gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; pointer-events: none;">Residential</span>
+                            <h3 style="color: white; font-family: var(--font-heading); font-size: 1.75rem; margin: 0; font-weight: 500; pointer-events: none;">Villa Aurum, Living Space</h3>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="hover-scale" style="position: relative; border-radius: 1.5rem; overflow: hidden; cursor: pointer; background: #ddd;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800" alt="Gallery" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem;" onmouseover="this.style.opacity='1'; this.previousElementSibling.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0'; this.previousElementSibling.style.transform='scale(1)';">
+                            <span style="color: var(--color-luxury-gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; pointer-events: none;">Commercial</span>
+                            <h3 style="color: white; font-family: var(--font-heading); font-size: 1.5rem; margin: 0; font-weight: 500; pointer-events: none;">The Glass Atrium</h3>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 (Tall) -->
+                    <div class="hover-scale gallery-tall" style="position: relative; border-radius: 1.5rem; overflow: hidden; cursor: pointer; background: #ddd;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800" alt="Gallery" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem;" onmouseover="this.style.opacity='1'; this.previousElementSibling.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0'; this.previousElementSibling.style.transform='scale(1)';">
+                            <span style="color: var(--color-luxury-gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; pointer-events: none;">Turnkey</span>
+                            <h3 style="color: white; font-family: var(--font-heading); font-size: 1.5rem; margin: 0; font-weight: 500; pointer-events: none;">Modern Monochrome</h3>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="hover-scale" style="position: relative; border-radius: 1.5rem; overflow: hidden; cursor: pointer; background: #ddd;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Gallery" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem;" onmouseover="this.style.opacity='1'; this.previousElementSibling.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0'; this.previousElementSibling.style.transform='scale(1)';">
+                            <span style="color: var(--color-luxury-gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; pointer-events: none;">Residential</span>
+                            <h3 style="color: white; font-family: var(--font-heading); font-size: 1.5rem; margin: 0; font-weight: 500; pointer-events: none;">Warm Textures</h3>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="hover-scale gallery-wide" style="position: relative; border-radius: 1.5rem; overflow: hidden; cursor: pointer; background: #ddd;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=1200" alt="Gallery" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem;" onmouseover="this.style.opacity='1'; this.previousElementSibling.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0'; this.previousElementSibling.style.transform='scale(1)';">
+                            <span style="color: var(--color-luxury-gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; pointer-events: none;">Furniture</span>
+                            <h3 style="color: white; font-family: var(--font-heading); font-size: 1.5rem; margin: 0; font-weight: 500; pointer-events: none;">Bespoke Woodwork</h3>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 (Wide) -->
+                    <div class="hover-scale gallery-wide" style="position: relative; border-radius: 1.5rem; overflow: hidden; cursor: pointer; background: #ddd;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200" alt="Gallery" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem;" onmouseover="this.style.opacity='1'; this.previousElementSibling.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0'; this.previousElementSibling.style.transform='scale(1)';">
+                            <span style="color: var(--color-luxury-gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; pointer-events: none;">Residential</span>
+                            <h3 style="color: white; font-family: var(--font-heading); font-size: 1.5rem; margin: 0; font-weight: 500; pointer-events: none;">The Minimalist Hub</h3>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="hover-scale" style="position: relative; border-radius: 1.5rem; overflow: hidden; cursor: pointer; background: #ddd;" data-animate="fade-up">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800" alt="Gallery" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem;" onmouseover="this.style.opacity='1'; this.previousElementSibling.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0'; this.previousElementSibling.style.transform='scale(1)';">
+                            <span style="color: var(--color-luxury-gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; pointer-events: none;">Commercial</span>
+                            <h3 style="color: white; font-family: var(--font-heading); font-size: 1.5rem; margin: 0; font-weight: 500; pointer-events: none;">Executive Suite</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div style="text-align: center; margin-top: 4rem;" data-animate="fade-up">
+                    <button class="btn btn-outline" style="border-radius: 2rem; padding: 1rem 3rem;">Load More</button>
                 </div>
             </div>
         </section>
 
         <!-- CTA -->
-        <section class="section-padding cta-banner">
-            <div class="container" data-animate="fade-up">
-                <h2 class="heading-lg">Inspired? Let's talk.</h2>
-                <a href="contact.html" class="btn btn-primary">Book Consultation</a>
+        <section class="section-padding cta-banner" style="background-color: var(--color-off-white); padding-bottom: 6rem;">
+            <div class="container" data-animate="fade-up" style="background-color: var(--color-dark-brown); border-radius: 2rem; padding: 5rem 2rem; text-align: center; color: var(--color-primary-cream);">
+                <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 500; margin-bottom: 2rem;">Ready to begin your project?</h2>
+                <a href="contact.html" class="btn" style="background-color: var(--color-luxury-gold); color: #fff; padding: 1.25rem 2.5rem; border-radius: 3rem; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    Book Consultation 
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <a href="../index.html" class="footer-logo">ORA</a>
-                    <p style="font-size: 0.875rem; color: var(--color-warm-beige);">Luxury interior design that transforms spaces into works of art.</p>
+    <footer style="background-color: #E6DFD4; position: relative; overflow: hidden; padding: 6rem 1rem 12vw 1rem; color: var(--color-dark-brown);">
+        
+        <div class="container" style="position: relative; z-index: 1; max-width: 1400px; margin: 0 auto;">
+            <!-- Main Footer Card -->
+            <div style="background-color: #ffffff; border-radius: 1.5rem; padding: 5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);" data-animate="fade-up">
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4rem; margin-bottom: 5rem;">
+                    <!-- Left: Logo & Tagline -->
+                    <div style="max-width: 320px;">
+                        <a href="../index.html" style="font-family: var(--font-heading); font-size: 2rem; font-weight: 500; color: var(--color-dark-brown); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="6" fill="var(--color-dark-brown)"/>
+                                <path d="M7 16L12 8L17 16" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 11L12 3L17 11" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            ORA.
+                        </a>
+                        <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
+                            Inspired by You, Built by Us. We help teams and families transform their blank spaces into clear, engaging realities — everything you need in one place.
+                        </p>
+                    </div>
+
+                    <!-- Right: Links Grid -->
+                    <div style="display: flex; gap: 6rem; flex-wrap: wrap; margin-left: auto;">
+                        <!-- Col 1 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Segments</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Residential</a></li>
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Commercial</a></li>
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Retail Turnkey</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Col 2 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Services</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Interior Execution</a></li>
+                                <li><a href="services.html" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">Home Automation</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 3 -->
+                        <div>
+                            <h4 style="font-size: 1.05rem; font-weight: 600; color: var(--color-dark-brown); margin-bottom: 1.5rem;">Contact</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <li><a href="mailto:hello@oraspaces.in" class="hover-text-dark" style="color: #666; text-decoration: none; font-size: 0.9rem;">hello@oraspaces.in</a></li>
+                                <li style="color: #666; font-size: 0.9rem;">Mumbai, Maharashtra</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Bottom Bar -->
+                <div style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div style="color: #888; font-size: 0.85rem;">
+                        &copy; 2025 ORA Spaces. All rights reserved.
+                    </div>
+                    <div style="display: flex; gap: 1.5rem;">
+                        <a href="#" class="hover-text-dark" style="color: #888; text-decoration: underline; font-size: 0.85rem; text-underline-offset: 4px;">Terms of Service</a>
+                        <a href="#" class="hover-text-dark" style="color: #888; text-decoration: underline; font-size: 0.85rem; text-underline-offset: 4px;">Privacy Policy</a>
+                    </div>
+                </div>
+
             </div>
-            <div class="footer-bottom">
-                &copy; 2026 ORA Interior Design.
-            </div>
+        </div>
+
+        <!-- Massive Watermark Text at the absolute bottom -->
+        <div style="position: absolute; bottom: -2vw; left: 50%; transform: translateX(-50%); font-size: 26vw; font-weight: 800; font-family: var(--font-heading); color: rgba(0,0,0,0.04); white-space: nowrap; line-height: 1; pointer-events: none; user-select: none;">
+            ORA
         </div>
     </footer>
 

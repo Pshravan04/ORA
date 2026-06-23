@@ -155,36 +155,39 @@
 
         <!-- Floating Overlap Cards -->
         <div class="container overlap-cards" style="position: relative; z-index: 10; margin-top: -60px; margin-bottom: 60px;" data-animate="fade-up">
-            <style>
-                .overlap-cards-grid {
-                    display: grid; 
-                    grid-template-columns: repeat(3, 1fr); 
-                    gap: 2rem;
-                }
-                @media (max-width: 992px) {
-                    .overlap-cards-grid {
-                        grid-template-columns: 1fr;
-                    }
-                    .overlap-cards {
-                        margin-top: -30px !important;
-                    }
-                }
-            </style>
-            <div class="overlap-cards-grid">
+            <div class="overlap-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
                 <!-- Card 1 -->
-                <div style="background-color: #ffffff; color: var(--color-dark-brown); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-top: 4px solid var(--color-luxury-gold);">
-                    <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Immersive Design</h4>
-                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6;">Merging aesthetic beauty with uncompromising functionality to elevate how you experience your space.</p>
+                <div class="overlap-card hover-scale" style="background: rgba(195, 162, 112, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 1.5rem; padding: 2.5rem; box-shadow: 0 25px 50px rgba(0,0,0,0.15); transition: all 0.4s ease; text-align: left; position: relative; overflow: hidden; display: flex; flex-direction: column;" onmouseover="this.style.background='rgba(205, 172, 122, 0.95)'; this.style.borderColor='rgba(255, 255, 255, 0.4)'" onmouseout="this.style.background='rgba(195, 162, 112, 0.85)'; this.style.borderColor='rgba(255, 255, 255, 0.2)'">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--color-dark-brown), transparent);"></div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+                        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(40, 30, 20, 0.05); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(40, 30, 20, 0.1);">
+                            <span style="color: var(--color-dark-brown); font-family: var(--font-heading); font-size: 1.2rem; font-weight: 500; font-style: italic;">01</span>
+                        </div>
+                    </div>
+                    <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600; color: var(--color-dark-brown);">Immersive Design</h4>
+                    <p style="font-size: 0.95rem; color: rgba(40, 30, 20, 0.8); line-height: 1.7; font-weight: 400;">Merging aesthetic beauty with uncompromising functionality to elevate how you experience your space.</p>
                 </div>
                 <!-- Card 2 -->
-                <div style="background-color: #ffffff; color: var(--color-dark-brown); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-top: 4px solid var(--color-luxury-gold);">
-                    <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Transparent Process</h4>
-                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6;">Clear pricing, defined timelines, and absolute accountability from the first conversation to final handover.</p>
+                <div class="overlap-card hover-scale" style="background: rgba(195, 162, 112, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 1.5rem; padding: 2.5rem; box-shadow: 0 25px 50px rgba(0,0,0,0.15); transition: all 0.4s ease; text-align: left; position: relative; overflow: hidden; display: flex; flex-direction: column;" onmouseover="this.style.background='rgba(205, 172, 122, 0.95)'; this.style.borderColor='rgba(255, 255, 255, 0.4)'" onmouseout="this.style.background='rgba(195, 162, 112, 0.85)'; this.style.borderColor='rgba(255, 255, 255, 0.2)'">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--color-dark-brown), transparent);"></div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+                        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(40, 30, 20, 0.05); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(40, 30, 20, 0.1);">
+                            <span style="color: var(--color-dark-brown); font-family: var(--font-heading); font-size: 1.2rem; font-weight: 500; font-style: italic;">02</span>
+                        </div>
+                    </div>
+                    <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600; color: var(--color-dark-brown);">Transparent Process</h4>
+                    <p style="font-size: 0.95rem; color: rgba(40, 30, 20, 0.8); line-height: 1.7; font-weight: 400;">Clear pricing, defined timelines, and absolute accountability from the first conversation to final handover.</p>
                 </div>
                 <!-- Card 3 -->
-                <div style="background-color: #ffffff; color: var(--color-dark-brown); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-top: 4px solid var(--color-luxury-gold);">
-                    <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Flawless Execution</h4>
-                    <p style="font-size: 0.95rem; color: #666; line-height: 1.6;">A dedicated team of craftsmen and managers ensuring every detail is built exactly as envisioned.</p>
+                <div class="overlap-card hover-scale" style="background: rgba(195, 162, 112, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 1.5rem; padding: 2.5rem; box-shadow: 0 25px 50px rgba(0,0,0,0.15); transition: all 0.4s ease; text-align: left; position: relative; overflow: hidden; display: flex; flex-direction: column;" onmouseover="this.style.background='rgba(205, 172, 122, 0.95)'; this.style.borderColor='rgba(255, 255, 255, 0.4)'" onmouseout="this.style.background='rgba(195, 162, 112, 0.85)'; this.style.borderColor='rgba(255, 255, 255, 0.2)'">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--color-dark-brown), transparent);"></div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+                        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(40, 30, 20, 0.05); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(40, 30, 20, 0.1);">
+                            <span style="color: var(--color-dark-brown); font-family: var(--font-heading); font-size: 1.2rem; font-weight: 500; font-style: italic;">03</span>
+                        </div>
+                    </div>
+                    <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600; color: var(--color-dark-brown);">Flawless Execution</h4>
+                    <p style="font-size: 0.95rem; color: rgba(40, 30, 20, 0.8); line-height: 1.7; font-weight: 400;">A dedicated team of craftsmen and managers ensuring every detail is built exactly as envisioned.</p>
                 </div>
             </div>
         </div>
@@ -197,10 +200,10 @@
                 <p style="margin: 2rem 0; font-size: 1.125rem; color: #555;" data-animate="fade-up">Most people spend months collecting ideas — and then face a completely different world when it's time to actually build. Here's what typically goes wrong:</p>
             </div>
             
-            <div class="container bento-grid" style="margin-top: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; grid-auto-rows: minmax(320px, auto);" data-animate="fade-up">
+            <div class="container bento-grid" style="margin-top: 4rem;" data-animate="fade-up">
                 
                 <!-- Card 1: Top Left -->
-                <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; grid-column: 1; grid-row: 1;">
+                <div class="bento-grid-card" style="grid-column: 1; grid-row: 1;">
                     <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 500;">Budgets that keep moving</h3>
                     <p style="font-size: 0.9rem; color: #555; line-height: 1.6;">What starts at 8L ends at 14L. Unexpected costs arrive after work has already started — when walking away isn't an option.</p>
                     <div style="margin-top: 2.5rem;">
@@ -214,7 +217,7 @@
                 </div>
 
                 <!-- Card 2: Top Middle -->
-                <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; grid-column: 2; grid-row: 1;">
+                <div class="bento-grid-card" style="grid-column: 2; grid-row: 1;">
                     <div style="width: 60px; height: 60px; background: radial-gradient(circle at 30% 30%, #E7DCCF, #5A4A3E); border-radius: 50%; margin-bottom: 2.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.08);"></div>
                     <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 500;">Timelines that stretch</h3>
                     <p style="font-size: 0.9rem; color: #555; line-height: 1.6;">"2 months" turns into 5. You're living out of boxes, working from disrupted offices, or delaying your opening.</p>
@@ -239,26 +242,7 @@
                 </div>
             </div>
             
-            <style>
-                @media (max-width: 992px) {
-                    .bento-grid {
-                        grid-template-columns: 1fr 1fr !important;
-                    }
-                    .bento-grid > div:nth-child(4) {
-                        grid-column: 1 / span 2 !important;
-                        grid-row: 3 !important;
-                    }
-                }
-                @media (max-width: 768px) {
-                    .bento-grid {
-                        grid-template-columns: 1fr !important;
-                    }
-                    .bento-grid > div {
-                        grid-column: 1 !important;
-                        grid-row: auto !important;
-                    }
-                }
-            </style>
+
         </section>
 
         <!-- Section: Segments Served (Bento Grid) -->
@@ -271,10 +255,10 @@
                 </div>
             </div>
             
-            <div class="container segments-bento" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; grid-auto-rows: minmax(280px, auto);" data-animate="fade-up">
+            <div class="container segments-bento" data-animate="fade-up">
                 
                 <!-- Left Tall Card: Residential -->
-                <div style="border-radius: 1.5rem; overflow: hidden; position: relative; grid-row: 1 / span 2; min-height: 600px; padding: 3rem; display: flex; flex-direction: column; justify-content: flex-end; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                <div class="segment-card" style="grid-row: 1 / span 2; min-height: 600px; justify-content: flex-end;">
                     <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="Residential Interior" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%); z-index: 1;"></div>
                     <div style="position: relative; z-index: 2; color: #fff;">
@@ -286,7 +270,7 @@
                 </div>
 
                 <!-- Right Top Card: Commercial -->
-                <div style="background-color: #fff; border-radius: 1.5rem; padding: 3rem; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.03);">
+                <div class="segment-card" style="background-color: #fff;">
                     <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(184,149,93,0.1), transparent); border-radius: 50%; pointer-events: none;"></div>
                     <h3 style="font-size: 2rem; margin-bottom: 0.5rem; font-family: var(--font-heading); font-weight: 400; color: var(--color-dark-brown);">Commercial</h3>
                     <span class="subtitle" style="color: var(--color-luxury-gold); font-weight: 500; display: block; margin-bottom: 1rem; letter-spacing: 0.15em; font-size: 0.75rem;">Spaces That Work as Hard as You Do</span>
@@ -295,7 +279,7 @@
                 </div>
 
                 <!-- Right Bottom Card: Retail -->
-                <div style="background: radial-gradient(circle at 100% 100%, #8C7A6B 0%, #2A2520 100%); border-radius: 1.5rem; padding: 3rem; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; color: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <div class="segment-card" style="background: radial-gradient(circle at 100% 100%, #8C7A6B 0%, #2A2520 100%); color: #fff;">
                     <h3 style="font-size: 2rem; margin-bottom: 0.5rem; font-family: var(--font-heading); font-weight: 400; color: #fff;">Retail</h3>
                     <span class="subtitle" style="color: rgba(255,255,255,0.7); font-weight: 500; display: block; margin-bottom: 1rem; letter-spacing: 0.15em; font-size: 0.75rem;">Environments That Sell</span>
                     <p style="font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 2rem; max-width: 90%;">Your store, café, or restaurant is your brand made physical. The right environment drives dwell time, purchase intent, and loyalty.</p>
@@ -304,17 +288,7 @@
 
             </div>
 
-            <style>
-                @media (max-width: 992px) {
-                    .segments-bento {
-                        grid-template-columns: 1fr !important;
-                    }
-                    .segments-bento > div {
-                        grid-row: auto !important;
-                        min-height: 350px;
-                    }
-                }
-            </style>
+
         </section>
 
         <!-- Section 7: How We Work (Premium Process Grid) -->
@@ -327,43 +301,35 @@
                     <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 1.5rem auto 0; font-size: 1.05rem; line-height: 1.6;">Every ORA project follows a structured execution framework — so nothing falls through the cracks.</p>
                 </div>
 
-                <style>
-                    @media (max-width: 992px) {
-                        .how-we-work-grid { grid-template-columns: repeat(2, 1fr) !important; }
-                    }
-                    @media (max-width: 576px) {
-                        .how-we-work-grid { grid-template-columns: 1fr !important; }
-                    }
-                </style>
-                <div class="how-we-work-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;" data-animate="fade-up">
+                <div class="how-we-work-grid" data-animate="fade-up">
                     
                     <!-- Step 1 -->
-                    <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                        <div style="position: absolute; top: -15px; right: -15px; font-size: 10rem; font-weight: 700; color: rgba(184, 149, 93, 0.15); font-family: var(--font-heading); line-height: 1; pointer-events: none; transition: color 0.4s ease;" onmouseover="this.style.color='rgba(184,149,93,0.3)'" onmouseout="this.style.color='rgba(184, 149, 93, 0.15)'">1</div>
+                    <div class="work-step-card">
+                        <div class="work-step-bg-number">1</div>
                         <div style="color: var(--color-dark-brown); font-size: 0.75rem; font-weight: 600; margin-bottom: 2rem; border-bottom: 1px solid rgba(184,149,93,0.3); padding-bottom: 1rem; display: inline-block; text-transform: uppercase; letter-spacing: 0.15em;">Phase 01</div>
                         <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--color-dark-brown); font-family: var(--font-heading); font-weight: 400;">Discovery</h3>
                         <p style="font-size: 0.95rem; color: #555; line-height: 1.7; position: relative; z-index: 2;">We listen. Your references, your lifestyle, your non-negotiables, your budget reality — everything shapes what comes next.</p>
                     </div>
 
                     <!-- Step 2 -->
-                    <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                        <div style="position: absolute; top: -15px; right: -15px; font-size: 10rem; font-weight: 700; color: rgba(184, 149, 93, 0.15); font-family: var(--font-heading); line-height: 1; pointer-events: none; transition: color 0.4s ease;" onmouseover="this.style.color='rgba(184,149,93,0.3)'" onmouseout="this.style.color='rgba(184, 149, 93, 0.15)'">2</div>
+                    <div class="work-step-card">
+                        <div class="work-step-bg-number">2</div>
                         <div style="color: var(--color-dark-brown); font-size: 0.75rem; font-weight: 600; margin-bottom: 2rem; border-bottom: 1px solid rgba(184,149,93,0.3); padding-bottom: 1rem; display: inline-block; text-transform: uppercase; letter-spacing: 0.15em;">Phase 02</div>
                         <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--color-dark-brown); font-family: var(--font-heading); font-weight: 400;">Design & Estimate</h3>
                         <p style="font-size: 0.95rem; color: #555; line-height: 1.7; position: relative; z-index: 2;">Concept layouts, material selections, and a transparent scope-and-cost breakdown — before a single wall is touched.</p>
                     </div>
 
                     <!-- Step 3 -->
-                    <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                        <div style="position: absolute; top: -15px; right: -15px; font-size: 10rem; font-weight: 700; color: rgba(184, 149, 93, 0.15); font-family: var(--font-heading); line-height: 1; pointer-events: none; transition: color 0.4s ease;" onmouseover="this.style.color='rgba(184,149,93,0.3)'" onmouseout="this.style.color='rgba(184, 149, 93, 0.15)'">3</div>
+                    <div class="work-step-card">
+                        <div class="work-step-bg-number">3</div>
                         <div style="color: var(--color-dark-brown); font-size: 0.75rem; font-weight: 600; margin-bottom: 2rem; border-bottom: 1px solid rgba(184,149,93,0.3); padding-bottom: 1rem; display: inline-block; text-transform: uppercase; letter-spacing: 0.15em;">Phase 03</div>
                         <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--color-dark-brown); font-family: var(--font-heading); font-weight: 400;">Execution</h3>
                         <p style="font-size: 0.95rem; color: #555; line-height: 1.7; position: relative; z-index: 2;">Our team coordinates all trades — civil, electrical, carpentry, finishing — under one roof. You get updates, not surprises.</p>
                     </div>
 
                     <!-- Step 4 -->
-                    <div style="background-color: var(--color-primary-cream); border-radius: 1.5rem; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                        <div style="position: absolute; top: -15px; right: -15px; font-size: 10rem; font-weight: 700; color: rgba(184, 149, 93, 0.15); font-family: var(--font-heading); line-height: 1; pointer-events: none; transition: color 0.4s ease;" onmouseover="this.style.color='rgba(184,149,93,0.3)'" onmouseout="this.style.color='rgba(184, 149, 93, 0.15)'">4</div>
+                    <div class="work-step-card">
+                        <div class="work-step-bg-number">4</div>
                         <div style="color: var(--color-dark-brown); font-size: 0.75rem; font-weight: 600; margin-bottom: 2rem; border-bottom: 1px solid rgba(184,149,93,0.3); padding-bottom: 1rem; display: inline-block; text-transform: uppercase; letter-spacing: 0.15em;">Phase 04</div>
                         <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--color-dark-brown); font-family: var(--font-heading); font-weight: 400;">Handover</h3>
                         <p style="font-size: 0.95rem; color: #555; line-height: 1.7; position: relative; z-index: 2;">Punch list cleared. Final walkthrough done. Your space is ready to live in, work from, or open to customers.</p>
