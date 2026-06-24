@@ -41,7 +41,7 @@
 html {
   scroll-behavior: initial; /* Lenis handles this */
   font-size: 16px;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -52,7 +52,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   position: relative;
 }
@@ -801,7 +801,7 @@ textarea.form-input {
   width: 50%;
   padding-right: 4rem;
   position: sticky;
-  top: 20%;
+  top: 20vh;
 }
 .split-scroller-right {
   width: 50%;
@@ -1114,14 +1114,18 @@ textarea.form-input {
   /* Soft gradient glow for pendant lamps */
   .lamp-glow {
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translateX(-50%);
     width: 450px;
     height: 450px;
-    background: radial-gradient(circle, rgba(255,248,200,0.5) 0%, rgba(255,250,220,0.2) 30%, transparent 50%);
-    z-index: -1;
+    background: radial-gradient(circle at 50% 10%, rgba(255,248,180,0.95) 0%, rgba(255,248,180,0.5) 20%, rgba(255,250,220,0.15) 50%, transparent 70%);
+    z-index: 0;
     pointer-events: none;
+    mix-blend-mode: screen;
+    /* A bright 'bulb' effect right at the source */
+    box-shadow: inset 0 20px 30px -10px rgba(255, 248, 180, 0.8);
+    border-radius: 50%;
   }
 
   .services-hero-lamps {
